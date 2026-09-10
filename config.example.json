@@ -1,0 +1,13 @@
+{
+  "server": {
+    "port": ":8008"
+  },
+  "crawl": {
+    "target_url": "https://www.onebiji.com/hykb_tools/comm/lkwgmerchant/preview.php?id=1&immgj=0",
+    "interval": 3
+  },
+  "serverchan": {
+    "uid": "",
+    "sendkey": ""
+  }
+}

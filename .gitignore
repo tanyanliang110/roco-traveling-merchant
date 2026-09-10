@@ -1,0 +1,33 @@
+# 编译产物
+roco-api
+roco-api.exe
+*.exe
+__debug_bin*
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# 系统
+.DS_Store
+Thumbs.db
+
+# 编辑备份
+*~
+*.bak
+
+# 调试文件
+raw.html
+page_raw.html
+debug_*.html
+
+# 本地配置和静态输出
+config.json
+public/
+pages/
+.public.publish-*
+.pages.publish-*
+
+# 日志
+*.log
