@@ -24,13 +24,28 @@
         "category": "炼金材料",
         "desc": "比较常用的炼金材料，可以用来合成咕噜球和技能石。 特殊的晶体排列解构，精灵打喷嚏可能会令这种晶体发生爆炸。",
         "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/f/f3/c5x5f0lgk33ly801m8w1n9aod8ny4sh.png/100px-100683.png",
-        "is_on_sale": true,
-        "has_ended": false,
+        "is_on_sale": false,
+        "has_ended": true,
         "is_upcoming": false,
-        "remain": "01:02:14",
+        "remain": "",
         "slot_label": "12:00-16:00",
         "start_at": 1789012800,
         "end_at": 1789027200
+      },
+      {
+        "name": "国王球",
+        "price": "16w",
+        "limit": "限购3",
+        "category": "咕噜球",
+        "desc": "昂贵且好用的咕噜球，能十分轻易地捕捉精灵，并能提升精灵的天分。 曾经专供贵族使用，制作方法不明。",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/2/2e/jygbfxpdbup5weqy4zaqnyaw2fcfyrq.png/100px-100255.png",
+        "is_on_sale": true,
+        "has_ended": false,
+        "is_upcoming": false,
+        "remain": "03:38:51",
+        "slot_label": "16:00-20:00",
+        "start_at": 1789027200,
+        "end_at": 1789041600
       },
       {
         "name": "黑晶琉璃",
@@ -79,7 +94,7 @@
       }
     ],
     "on_sale_count": 1,
-    "total_count": 4,
-    "updated_at": "2026-09-10 14:57:45"
+    "total_count": 5,
+    "updated_at": "2026-09-10 16:21:08"
   }
 }
