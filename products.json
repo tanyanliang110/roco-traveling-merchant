@@ -39,10 +39,10 @@
         "category": "咕噜球",
         "desc": "昂贵且好用的咕噜球，能十分轻易地捕捉精灵，并能提升精灵的天分。 曾经专供贵族使用，制作方法不明。",
         "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/2/2e/jygbfxpdbup5weqy4zaqnyaw2fcfyrq.png/100px-100255.png",
-        "is_on_sale": true,
-        "has_ended": false,
+        "is_on_sale": false,
+        "has_ended": true,
         "is_upcoming": false,
-        "remain": "03:38:51",
+        "remain": "",
         "slot_label": "16:00-20:00",
         "start_at": 1789027200,
         "end_at": 1789041600
@@ -78,6 +78,36 @@
         "end_at": 1789012800
       },
       {
+        "name": "火系血脉秘药",
+        "price": "16w",
+        "limit": "限购3",
+        "category": "血脉修改道具",
+        "desc": "能唤醒血脉力量的远古秘药，使精灵获得火系血脉。 “一段失落的秘密将被重拾。”",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/5/58/qcen9i07u68symzdrga5qcli2wq6ws3.png/100px-Xuemai_huo.png",
+        "is_on_sale": true,
+        "has_ended": false,
+        "is_upcoming": false,
+        "remain": "02:54:52",
+        "slot_label": "20:00-24:00",
+        "start_at": 1789041600,
+        "end_at": 1789056000
+      },
+      {
+        "name": "普通粉尘",
+        "price": "500",
+        "limit": "限购100",
+        "category": "炼金材料",
+        "desc": "常见的炼金材料，蕴含少量普通系魔法，是合成技能石的主要触媒。",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/f/f6/ls7hsygs9epizddf1xo4q9b2iu1dduu.png/100px-100127.png",
+        "is_on_sale": true,
+        "has_ended": false,
+        "is_upcoming": false,
+        "remain": "02:54:52",
+        "slot_label": "20:00-24:00",
+        "start_at": 1789041600,
+        "end_at": 1789056000
+      },
+      {
         "name": "草系粉尘",
         "price": "500",
         "limit": "限购100",
@@ -93,8 +123,8 @@
         "end_at": 1789012800
       }
     ],
-    "on_sale_count": 1,
-    "total_count": 5,
-    "updated_at": "2026-09-10 16:21:08"
+    "on_sale_count": 2,
+    "total_count": 7,
+    "updated_at": "2026-09-10 21:05:07"
   }
 }
