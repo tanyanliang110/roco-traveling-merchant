@@ -5,19 +5,19 @@
     "on_sale_count": 1,
     "products": [
       {
-        "name": "水系粉尘",
-        "price": "500",
+        "name": "蓝晶碧玺",
+        "price": "1000",
         "limit": "限购100",
         "category": "炼金材料",
-        "desc": "常见的炼金材料，蕴含少量水系魔法，是合成技能石的主要触媒。",
-        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/c/c7/4fxef31uslze9psd9375td9zbqtbllv.png/100px-100123.png",
+        "desc": "比较常用的炼金材料，可以用来合成咕噜球和技能石。 某些晶石蜗会产出珍贵的粉蓝色碧玺，为此商人翻着花样研究晶石蜗的食谱喜好。",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/c/c5/k8wzdzechd88qs9bxuvcnyg0pv4tzl4.png/100px-100681.png",
         "is_on_sale": true,
         "has_ended": false,
         "is_upcoming": false,
-        "remain": "00:00:42",
-        "slot_label": "12:00-16:00",
-        "start_at": 1789099200,
-        "end_at": 1789113600
+        "remain": "03:56:21",
+        "slot_label": "16:00-20:00",
+        "start_at": 1789113600,
+        "end_at": 1789128000
       }
     ],
     "time_slots": [
@@ -34,6 +34,6 @@
         "label": "20:00-24:00"
       }
     ],
-    "updated_at": "2026-09-11 15:59:17"
+    "updated_at": "2026-09-11 16:03:38"
   }
 }
