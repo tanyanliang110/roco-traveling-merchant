@@ -24,10 +24,10 @@
         "category": "炼金材料",
         "desc": "比较常用的炼金材料，可以用来合成咕噜球和技能石。 “我的阿米亚特说这玩意儿太香了，嚼起来有些呛口，像火山灰，有纯正的拉布朗矿山味道。”",
         "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/b/bc/khe20j8lwkt1bg9g4b0gbnsff48g93c.png/100px-100628.png",
-        "is_on_sale": true,
-        "has_ended": false,
+        "is_on_sale": false,
+        "has_ended": true,
         "is_upcoming": false,
-        "remain": "00:06:35",
+        "remain": "",
         "slot_label": "08:00-12:00",
         "start_at": 1789084800,
         "end_at": 1789099200
@@ -54,10 +54,10 @@
         "category": "精灵喂养材料",
         "desc": "不太常见的果实，精灵食用后获得能力提升。 “精灵食物营养科的研究总是不见进展，这么多年了精灵还在吃果子。”",
         "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/c/c6/5qe6rcdtfxe1gsrvgj3lrn033athx9p.png/100px-100668.png",
-        "is_on_sale": true,
-        "has_ended": false,
+        "is_on_sale": false,
+        "has_ended": true,
         "is_upcoming": false,
-        "remain": "00:06:35",
+        "remain": "",
         "slot_label": "08:00-12:00",
         "start_at": 1789084800,
         "end_at": 1789099200
@@ -69,17 +69,32 @@
         "category": "精灵蛋",
         "desc": "蕴含着难以捉摸的魔力，不知道可以孵化出哪种精灵。",
         "image_url": "//img.71acg.net/whd~hykb/comm/hd_admin_upload_2982_5390e1a946446e64d929ad89a3ad3eed.png",
-        "is_on_sale": true,
-        "has_ended": false,
+        "is_on_sale": false,
+        "has_ended": true,
         "is_upcoming": false,
-        "remain": "00:06:35",
+        "remain": "",
         "slot_label": "08:00-12:00",
         "start_at": 1789084800,
         "end_at": 1789099200
+      },
+      {
+        "name": "水系粉尘",
+        "price": "500",
+        "limit": "限购100",
+        "category": "炼金材料",
+        "desc": "常见的炼金材料，蕴含少量水系魔法，是合成技能石的主要触媒。",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/c/c7/4fxef31uslze9psd9375td9zbqtbllv.png/100px-100123.png",
+        "is_on_sale": true,
+        "has_ended": false,
+        "is_upcoming": false,
+        "remain": "03:57:16",
+        "slot_label": "12:00-16:00",
+        "start_at": 1789099200,
+        "end_at": 1789113600
       }
     ],
-    "on_sale_count": 3,
-    "total_count": 4,
-    "updated_at": "2026-09-11 11:53:24"
+    "on_sale_count": 1,
+    "total_count": 5,
+    "updated_at": "2026-09-11 12:02:43"
   }
 }
