@@ -2,69 +2,8 @@
   "code": 200,
   "message": "success",
   "data": {
-    "on_sale_count": 4,
-    "products": [
-      {
-        "name": "暗星球",
-        "price": "3000",
-        "limit": "限购200",
-        "category": "特制咕噜球",
-        "desc": "更适合用来捕捉幽系、恶系精灵。 爱捉弄的球，喜欢偷袭精灵。",
-        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/5/5a/hif6470l7ojdexwm72t9brp0f0x3h4x.png/100px-Img_daodanqiu.png",
-        "is_on_sale": true,
-        "has_ended": false,
-        "is_upcoming": false,
-        "remain": "00:16:42",
-        "slot_label": "20:00-24:00",
-        "start_at": 1789128000,
-        "end_at": 1789142400
-      },
-      {
-        "name": "蓝晶碧玺",
-        "price": "1000",
-        "limit": "限购100",
-        "category": "炼金材料",
-        "desc": "比较常用的炼金材料，可以用来合成咕噜球和技能石。 某些晶石蜗会产出珍贵的粉蓝色碧玺，为此商人翻着花样研究晶石蜗的食谱喜好。",
-        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/c/c5/k8wzdzechd88qs9bxuvcnyg0pv4tzl4.png/100px-100681.png",
-        "is_on_sale": true,
-        "has_ended": false,
-        "is_upcoming": false,
-        "remain": "00:16:42",
-        "slot_label": "20:00-24:00",
-        "start_at": 1789128000,
-        "end_at": 1789142400
-      },
-      {
-        "name": "魔力果",
-        "price": "6000",
-        "limit": "限购20",
-        "category": "精灵喂养材料",
-        "desc": "不太常见的果实，精灵食用后获得能力提升。 “精灵食物营养科的研究总是不见进展，这么多年了精灵还在吃果子。”",
-        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/c/c6/5qe6rcdtfxe1gsrvgj3lrn033athx9p.png/100px-100668.png",
-        "is_on_sale": true,
-        "has_ended": false,
-        "is_upcoming": false,
-        "remain": "00:16:42",
-        "slot_label": "20:00-24:00",
-        "start_at": 1789128000,
-        "end_at": 1789142400
-      },
-      {
-        "name": "草系粉尘",
-        "price": "500",
-        "limit": "限购100",
-        "category": "炼金材料",
-        "desc": "常见的炼金材料，蕴含少量草系魔法，是合成技能石的主要触媒。",
-        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/3/32/2k88qbruf464xxyf02grnmkvun59h0c.png/100px-100121.png",
-        "is_on_sale": true,
-        "has_ended": false,
-        "is_upcoming": false,
-        "remain": "00:16:42",
-        "slot_label": "20:00-24:00",
-        "start_at": 1789128000,
-        "end_at": 1789142400
-      }
-    ],
+    "on_sale_count": 0,
+    "products": [],
     "time_slots": [
       {
         "label": "08:00-12:00"
@@ -79,6 +18,6 @@
         "label": "20:00-24:00"
       }
     ],
-    "updated_at": "2026-09-11 23:43:17"
+    "updated_at": "2026-09-12 00:46:18"
   }
 }
