@@ -24,10 +24,10 @@
         "category": "特制咕噜球",
         "desc": "更适合用来捕捉幽系、恶系精灵。 爱捉弄的球，喜欢偷袭精灵。",
         "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/5/5a/hif6470l7ojdexwm72t9brp0f0x3h4x.png/100px-Img_daodanqiu.png",
-        "is_on_sale": true,
-        "has_ended": false,
+        "is_on_sale": false,
+        "has_ended": true,
         "is_upcoming": false,
-        "remain": "00:06:31",
+        "remain": "",
         "slot_label": "20:00-24:00",
         "start_at": 1789214400,
         "end_at": 1789228800
@@ -144,17 +144,17 @@
         "category": "精灵蛋",
         "desc": "蕴含着难以捉摸的魔力，不知道可以孵化出哪种精灵。",
         "image_url": "//img.71acg.net/whd~hykb/comm/hd_admin_upload_2982_5390e1a946446e64d929ad89a3ad3eed.png",
-        "is_on_sale": true,
-        "has_ended": false,
+        "is_on_sale": false,
+        "has_ended": true,
         "is_upcoming": false,
-        "remain": "00:06:31",
+        "remain": "",
         "slot_label": "20:00-24:00",
         "start_at": 1789214400,
         "end_at": 1789228800
       }
     ],
-    "on_sale_count": 2,
+    "on_sale_count": 0,
     "total_count": 9,
-    "updated_at": "2026-09-12 23:53:28"
+    "updated_at": "2026-09-13 01:45:01"
   }
 }
