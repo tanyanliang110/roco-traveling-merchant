@@ -27,7 +27,7 @@
         "is_on_sale": true,
         "has_ended": false,
         "is_upcoming": false,
-        "remain": "03:16:43",
+        "remain": "03:06:45",
         "slot_label": "08:00-12:00",
         "start_at": 1789257600,
         "end_at": 1789272000
@@ -50,6 +50,6 @@
     ],
     "on_sale_count": 1,
     "total_count": 2,
-    "updated_at": "2026-09-13 08:43:16"
+    "updated_at": "2026-09-13 08:53:14"
   }
 }
