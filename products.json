@@ -54,10 +54,10 @@
         "category": "炼金材料",
         "desc": "比较常用的炼金材料，可以用来合成咕噜球和技能石。 某些晶石蜗会产出珍贵的粉蓝色碧玺，为此商人翻着花样研究晶石蜗的食谱喜好。",
         "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/c/c5/k8wzdzechd88qs9bxuvcnyg0pv4tzl4.png/100px-100681.png",
-        "is_on_sale": true,
-        "has_ended": false,
+        "is_on_sale": false,
+        "has_ended": true,
         "is_upcoming": false,
-        "remain": "00:06:37",
+        "remain": "",
         "slot_label": "12:00-16:00",
         "start_at": 1789358400,
         "end_at": 1789372800
@@ -84,10 +84,10 @@
         "category": "炼金材料",
         "desc": "常见的炼金材料，蕴含少量幽系魔法，是合成技能石的主要触媒。",
         "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/2/20/okbnyp4feg52iaxuijvjzv6wodaqjmi.png/100px-100126.png",
-        "is_on_sale": true,
-        "has_ended": false,
+        "is_on_sale": false,
+        "has_ended": true,
         "is_upcoming": false,
-        "remain": "00:06:37",
+        "remain": "",
         "slot_label": "12:00-16:00",
         "start_at": 1789358400,
         "end_at": 1789372800
@@ -99,17 +99,32 @@
         "category": "炼金材料",
         "desc": "常见的炼金材料，蕴含少量幻系魔法，是合成技能石的主要触媒。",
         "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/2/24/sgt0lc5llwfvlcmjhr1awhwq6st35fj.png/100px-100139.png",
-        "is_on_sale": true,
-        "has_ended": false,
+        "is_on_sale": false,
+        "has_ended": true,
         "is_upcoming": false,
-        "remain": "00:06:37",
+        "remain": "",
         "slot_label": "12:00-16:00",
         "start_at": 1789358400,
         "end_at": 1789372800
+      },
+      {
+        "name": "机械血脉秘药",
+        "price": "16w",
+        "limit": "限购3",
+        "category": "血脉修改道具",
+        "desc": "能唤醒血脉力量的远古秘药，使精灵获得机械系血脉。 “一段失落的秘密将被重拾。”",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/5/56/12jc1mzlz7nhgnterqdk6bgm6rofibn.png/100px-Xuemai_gang.png",
+        "is_on_sale": true,
+        "has_ended": false,
+        "is_upcoming": false,
+        "remain": "03:56:42",
+        "slot_label": "16:00-20:00",
+        "start_at": 1789372800,
+        "end_at": 1789387200
       }
     ],
-    "on_sale_count": 3,
-    "total_count": 6,
-    "updated_at": "2026-09-14 15:53:22"
+    "on_sale_count": 1,
+    "total_count": 7,
+    "updated_at": "2026-09-14 16:03:17"
   }
 }
