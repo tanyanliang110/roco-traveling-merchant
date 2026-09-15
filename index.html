@@ -9,6 +9,7 @@ h1{color:#333;margin-bottom:12px}
 .onsale{border-left:4px solid #4caf50}
 .ended{border-left:4px solid #f44336}
 .upcoming{border-left:4px solid #ff9800}
+.priority{background:#fff8e1;border-left-color:#ffc107;box-shadow:0 0 0 1px #ffe082 inset}
 .tag{display:inline-block;padding:2px 8px;border-radius:4px;font-size:13px}
 .tag-ok{background:#4caf50;color:#fff}
 .tag-end{background:#f44336;color:#fff}
@@ -18,31 +19,37 @@ h1{color:#333;margin-bottom:12px}
 </style></head>
 <body>
 <h1>🏪 洛克王国 · 远行商人</h1>
-<p id="summary">📅 更新时间: <strong>2026-09-15 13:53:29</strong> &nbsp; 📦 3件 ✅ 1件在售</p>
+<p id="summary">📅 更新时间: <strong>2026-09-15 14:03:19</strong> &nbsp; 📦 3件 ✅ 1件在售</p>
 <p id="time-slots">🕐 时段:<span class="slot">08:00-12:00</span><span class="slot">12:00-16:00</span><span class="slot">16:00-20:00</span><span class="slot">20:00-24:00</span></p>
 <h2 style="margin-top:20px">当前商品</h2>
-<div id="product-list"><div class="card onsale" data-start-at="1789444800" data-end-at="1789459200">
+<div id="product-list"><div class="card onsale" data-start-at="1789444800" data-end-at="1789459200" data-product-name="翼系血脉秘药" data-priority-rank="-1" data-slot-order="1">
   <strong>翼系血脉秘药</strong> <span class="tag tag-ok">✅ 在售</span>
   <p>💰 16w &nbsp; 📦 限购3 &nbsp; 📂 血脉修改道具 <span class="slot">🕐 12:00-16:00</span></p>
   <p class="countdown"><span class="countdown-label">⏱ 剩余</span> <span class="cd">计算中…</span></p>
-</div><div class="card ended" data-start-at="1789430400" data-end-at="1789444800">
+</div><div class="card ended" data-start-at="1789430400" data-end-at="1789444800" data-product-name="毒系粉尘" data-priority-rank="-1" data-slot-order="0">
   <strong>毒系粉尘</strong> <span class="tag tag-end">❌ 已结束</span>
   <p>💰 500 &nbsp; 📦 限购100 &nbsp; 📂 炼金材料 <span class="slot">🕐 08:00-12:00</span></p>
   <p class="countdown"><span class="countdown-label">—</span></p>
-</div><div class="card ended" data-start-at="1789430400" data-end-at="1789444800">
+</div><div class="card ended" data-start-at="1789430400" data-end-at="1789444800" data-product-name="神奇的蛋" data-priority-rank="-1" data-slot-order="0">
   <strong>神奇的蛋</strong> <span class="tag tag-end">❌ 已结束</span>
   <p>💰 36000 &nbsp; 📦 限购5 &nbsp; 📂 精灵蛋 <span class="slot">🕐 08:00-12:00</span></p>
   <p class="countdown"><span class="countdown-label">—</span></p>
 </div></div>
 <script>
 (function(){
+var priorityProductNames=["炫彩精灵蛋","奇异血脉秘药","首领血脉秘药","棱镜球"];
+function priorityProductRank(name){return priorityProductNames.indexOf(stringValue(name))}
 function pad(n){return n<10?'0'+n:''+n}
 function duration(seconds){
   return pad(Math.floor(seconds/3600))+':'+pad(Math.floor((seconds%3600)/60))+':'+pad(seconds%60);
 }
 function setStatus(card,status,label,countdown){
-  card.classList.remove('onsale','upcoming','ended');
+  card.classList.remove('onsale','upcoming','ended','priority');
   card.classList.add(status);
+  var priority=status==='onsale'&&parseInt(card.getAttribute('data-priority-rank'),10)>=0;
+  if(priority)card.classList.add('priority');
+  var name=card.querySelector('strong');
+  name.textContent=(priority?'❗ ':'')+stringValue(card.getAttribute('data-product-name'));
   var badge=card.querySelector('.tag');
   badge.classList.remove('tag-ok','tag-up','tag-end');
   badge.classList.add(status==='onsale'?'tag-ok':status==='upcoming'?'tag-up':'tag-end');
@@ -71,13 +78,68 @@ function updateCard(card,now){
 function updateCountdowns(){
   var now=Math.floor(Date.now()/1000);
   document.querySelectorAll('[data-start-at][data-end-at]').forEach(function(card){updateCard(card,now)});
+  sortProductCards();
 }
 function stringValue(value){return value===null||value===undefined?'':String(value)}
-function buildProductCard(product){
+function compareProductNames(left,right){
+  var leftPoints=Array.from(stringValue(left)),rightPoints=Array.from(stringValue(right));
+  var length=Math.min(leftPoints.length,rightPoints.length);
+  for(var i=0;i<length;i++){
+    var leftCode=leftPoints[i].codePointAt(0),rightCode=rightPoints[i].codePointAt(0);
+    if(leftCode!==rightCode)return leftCode-rightCode;
+  }
+  return leftPoints.length-rightPoints.length;
+}
+function productStatusRank(product,now){
+  var start=parseInt(product.start_at,10),end=parseInt(product.end_at,10);
+  if(Number.isFinite(start)&&Number.isFinite(end)){
+    if(now<start)return 2;
+    if(now<end)return priorityProductRank(product.name)>=0?0:1;
+    return 3;
+  }
+  if(product.is_on_sale)return priorityProductRank(product.name)>=0?0:1;
+  return product.is_upcoming?2:3;
+}
+function sortSnapshotProducts(products,timeSlots){
+  var now=Math.floor(Date.now()/1000),slotOrder={};
+  timeSlots.forEach(function(slot,index){slotOrder[slot.label]=index});
+  return products.slice().sort(function(left,right){
+    var leftGroup=productStatusRank(left,now),rightGroup=productStatusRank(right,now);
+    if(leftGroup!==rightGroup)return leftGroup-rightGroup;
+    if(leftGroup===0){
+      var leftPriority=priorityProductRank(left.name),rightPriority=priorityProductRank(right.name);
+      if(leftPriority!==rightPriority)return leftPriority-rightPriority;
+    }
+    var leftSlot=Object.prototype.hasOwnProperty.call(slotOrder,left.slot_label)?slotOrder[left.slot_label]:timeSlots.length;
+    var rightSlot=Object.prototype.hasOwnProperty.call(slotOrder,right.slot_label)?slotOrder[right.slot_label]:timeSlots.length;
+    if(leftSlot!==rightSlot)return leftSlot-rightSlot;
+    return compareProductNames(left.name,right.name);
+  });
+}
+function sortProductCards(){
+  var list=document.getElementById('product-list');
+  if(!list)return;
+  Array.from(list.children).sort(function(left,right){
+    var group=function(card){return card.classList.contains('priority')?0:card.classList.contains('onsale')?1:card.classList.contains('upcoming')?2:3};
+    var leftGroup=group(left),rightGroup=group(right);
+    if(leftGroup!==rightGroup)return leftGroup-rightGroup;
+    if(leftGroup===0){
+      var leftPriority=parseInt(left.getAttribute('data-priority-rank'),10),rightPriority=parseInt(right.getAttribute('data-priority-rank'),10);
+      if(leftPriority!==rightPriority)return leftPriority-rightPriority;
+    }
+    var leftSlot=parseInt(left.getAttribute('data-slot-order'),10),rightSlot=parseInt(right.getAttribute('data-slot-order'),10);
+    if(leftSlot!==rightSlot)return leftSlot-rightSlot;
+    return compareProductNames(left.getAttribute('data-product-name'),right.getAttribute('data-product-name'));
+  }).forEach(function(card){list.appendChild(card)});
+}
+function buildProductCard(product,slotOrder){
   var card=document.createElement('div');
   card.className='card';
   card.setAttribute('data-start-at',stringValue(product.start_at));
   card.setAttribute('data-end-at',stringValue(product.end_at));
+  card.setAttribute('data-product-name',stringValue(product.name));
+  card.setAttribute('data-priority-rank',stringValue(priorityProductRank(product.name)));
+  card.setAttribute('data-slot-order',stringValue(Object.prototype.hasOwnProperty.call(slotOrder,product.slot_label)?slotOrder[product.slot_label]:Object.keys(slotOrder).length));
   var name=document.createElement('strong');
   name.textContent=product.name;
   card.appendChild(name);
@@ -110,7 +172,9 @@ function renderSnapshot(snapshot){
     slots.appendChild(slot);
   });
   var products=document.createDocumentFragment();
-  snapshot.products.forEach(function(product){products.appendChild(buildProductCard(product))});
+  var slotOrder={};
+  snapshot.time_slots.forEach(function(slot,index){slotOrder[slot.label]=index});
+  sortSnapshotProducts(snapshot.products,snapshot.time_slots).forEach(function(product){products.appendChild(buildProductCard(product,slotOrder))});
   document.getElementById('summary').textContent='📅 更新时间: '+stringValue(snapshot.updated_at)+'   📦 '+stringValue(snapshot.total_count)+'件 ✅ '+stringValue(snapshot.on_sale_count)+'件在售';
   document.getElementById('time-slots').replaceChildren(slots);
   document.getElementById('product-list').replaceChildren(products);
