@@ -61,17 +61,12 @@ func (s *Server) notify(result CrawlResult, now time.Time) {
 		return
 	}
 
-	var onsaleProducts []Product
-	for _, product := range result.Products {
-		if product.IsOnSale {
-			onsaleProducts = append(onsaleProducts, product)
-		}
-	}
+	onsaleProducts := prepareNotificationProducts(result.Products, result.TimeSlots)
 	if !needPush(onsaleProducts) {
 		return
 	}
 
-	title := fmt.Sprintf("🏪 远行商人更新 · %d 件在售", result.OnSaleCount)
+	title := notificationTitle(onsaleProducts)
 	SendServerChan(title, buildPushMessage(onsaleProducts, currentSlot(result.TimeSlots, now)))
 	markPushed(onsaleProducts)
 }
@@ -155,36 +150,6 @@ func (s *Server) snapshot() CrawlResult {
 	s.mu.RLock()
 	defer s.mu.RUnlock()
 	return s.cache
-}
-
-// sortProducts sorts products by availability, slot, then name.
-func sortProducts(products []Product, slots []ShopSlot) {
-	slotOrder := make(map[string]int)
-	for i, slot := range slots {
-		slotOrder[slot.Label] = i
-	}
-
-	for i := 0; i < len(products); i++ {
-		for j := i + 1; j < len(products); j++ {
-			if products[i].IsOnSale != products[j].IsOnSale {
-				if !products[i].IsOnSale {
-					products[i], products[j] = products[j], products[i]
-				}
-				continue
-			}
-			iOrder := slotOrder[products[i].SlotLabel]
-			jOrder := slotOrder[products[j].SlotLabel]
-			if iOrder != jOrder {
-				if iOrder > jOrder {
-					products[i], products[j] = products[j], products[i]
-				}
-				continue
-			}
-			if products[i].Name > products[j].Name {
-				products[i], products[j] = products[j], products[i]
-			}
-		}
-	}
 }
 
 func (s *Server) handleHome(w http.ResponseWriter, r *http.Request) {

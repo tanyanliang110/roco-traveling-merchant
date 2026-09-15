@@ -170,7 +170,9 @@ func joinStaticOutputErrors(operationErr, rollbackErr error) error {
 }
 
 func productsAPIResponse(result CrawlResult) APIResponse {
-	return APIResponse{Code: 200, Message: "success", Data: result}
+	view := result
+	view.Products = sortedProducts(result.Products, result.TimeSlots)
+	return APIResponse{Code: 200, Message: "success", Data: view}
 }
 
 func onSaleAPIResponse(result CrawlResult) APIResponse {
@@ -180,6 +182,7 @@ func onSaleAPIResponse(result CrawlResult) APIResponse {
 			products = append(products, product)
 		}
 	}
+	sortProducts(products, result.TimeSlots)
 	return APIResponse{
 		Code:    200,
 		Message: "success",

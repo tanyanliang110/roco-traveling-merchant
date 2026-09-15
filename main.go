@@ -161,12 +161,16 @@ func buildOncePushMessage(onsaleProducts []Product, currentSlotLabel string) str
 
 func buildPushMessageWithPageLink(onsaleProducts []Product, currentSlotLabel, pageLink string) string {
 	var b strings.Builder
+	onsaleProducts = prepareNotificationProducts(onsaleProducts, nil)
 
 	// 时段标题
 	b.WriteString(fmt.Sprintf("## 🕐 %s\n\n", currentSlotLabel))
 
 	// 在售商品
 	for _, p := range onsaleProducts {
+		if isImportantOnSale(p) {
+			b.WriteString("❗ ")
+		}
 		b.WriteString(fmt.Sprintf("**%s**  💰 %s", p.Name, p.Price))
 		if p.Limit != "" {
 			b.WriteString(fmt.Sprintf("  📦 %s", p.Limit))

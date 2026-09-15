@@ -6,47 +6,61 @@ import (
 )
 
 type pageData struct {
-	TimeSlots   []ShopSlot
-	Products    []pageProduct
-	OnSaleCount int
-	TotalCount  int
-	UpdatedAt   string
+	TimeSlots             []ShopSlot
+	Products              []pageProduct
+	OnSaleCount           int
+	TotalCount            int
+	UpdatedAt             string
+	ImportantProductNames []string
 }
 
 type pageProduct struct {
 	Product
-	CardClass string
-	TagClass  string
-	Badge     string
-	Countdown string
+	CardClass    string
+	TagClass     string
+	Badge        string
+	Countdown    string
+	IsPriority   bool
+	PriorityRank int
+	SlotOrder    int
 }
 
 // RenderPage renders the shared local and static merchant status page.
 func RenderPage(w io.Writer, result CrawlResult) error {
-	products := append([]Product(nil), result.Products...)
-	sortProducts(products, result.TimeSlots)
+	products := sortedProducts(result.Products, result.TimeSlots)
+	slotOrder := make(map[string]int, len(result.TimeSlots))
+	for i, slot := range result.TimeSlots {
+		slotOrder[slot.Label] = i
+	}
 
 	view := pageData{
-		TimeSlots:   result.TimeSlots,
-		Products:    make([]pageProduct, 0, len(products)),
-		OnSaleCount: result.OnSaleCount,
-		TotalCount:  result.TotalCount,
-		UpdatedAt:   result.UpdatedAt,
+		TimeSlots:             result.TimeSlots,
+		Products:              make([]pageProduct, 0, len(products)),
+		OnSaleCount:           result.OnSaleCount,
+		TotalCount:            result.TotalCount,
+		UpdatedAt:             result.UpdatedAt,
+		ImportantProductNames: append([]string(nil), importantProductNames...),
 	}
 	for _, product := range products {
-		view.Products = append(view.Products, newPageProduct(product))
+		pageProduct := newPageProduct(product)
+		pageProduct.SlotOrder = productSlotOrder(product.SlotLabel, slotOrder, len(result.TimeSlots))
+		view.Products = append(view.Products, pageProduct)
 	}
 	return merchantPageTemplate.Execute(w, view)
 }
 
 func newPageProduct(product Product) pageProduct {
-	view := pageProduct{Product: product}
+	view := pageProduct{Product: product, PriorityRank: importantProductRank(product.Name)}
 	switch {
 	case product.IsOnSale:
 		view.CardClass = "onsale"
 		view.TagClass = "tag-ok"
 		view.Badge = "✅ 在售"
 		view.Countdown = "⏱ 剩余"
+		if view.PriorityRank >= 0 {
+			view.CardClass += " priority"
+			view.IsPriority = true
+		}
 	case product.IsUpcoming:
 		view.CardClass = "upcoming"
 		view.TagClass = "tag-up"
@@ -72,6 +86,7 @@ h1{color:#333;margin-bottom:12px}
 .onsale{border-left:4px solid #4caf50}
 .ended{border-left:4px solid #f44336}
 .upcoming{border-left:4px solid #ff9800}
+.priority{background:#fff8e1;border-left-color:#ffc107;box-shadow:0 0 0 1px #ffe082 inset}
 .tag{display:inline-block;padding:2px 8px;border-radius:4px;font-size:13px}
 .tag-ok{background:#4caf50;color:#fff}
 .tag-end{background:#f44336;color:#fff}
@@ -84,20 +99,26 @@ h1{color:#333;margin-bottom:12px}
 <p id="summary">📅 更新时间: <strong>{{.UpdatedAt}}</strong> &nbsp; 📦 {{.TotalCount}}件 ✅ {{.OnSaleCount}}件在售</p>
 <p id="time-slots">🕐 时段:{{range .TimeSlots}}<span class="slot">{{.Label}}</span>{{end}}</p>
 <h2 style="margin-top:20px">当前商品</h2>
-<div id="product-list">{{range .Products}}<div class="card {{.CardClass}}" data-start-at="{{.StartAt}}" data-end-at="{{.EndAt}}">
-  <strong>{{.Name}}</strong> <span class="tag {{.TagClass}}">{{.Badge}}</span>
+<div id="product-list">{{range .Products}}<div class="card {{.CardClass}}" data-start-at="{{.StartAt}}" data-end-at="{{.EndAt}}" data-product-name="{{.Name}}" data-priority-rank="{{.PriorityRank}}" data-slot-order="{{.SlotOrder}}">
+  <strong>{{if .IsPriority}}❗ {{end}}{{.Name}}</strong> <span class="tag {{.TagClass}}">{{.Badge}}</span>
   <p>💰 {{.Price}} &nbsp; 📦 {{.Limit}} &nbsp; 📂 {{.Category}} <span class="slot">🕐 {{.SlotLabel}}</span></p>
   <p class="countdown"><span class="countdown-label">{{.Countdown}}</span>{{if not .HasEnded}} <span class="cd">计算中…</span>{{end}}</p>
 </div>{{end}}</div>
 <script>
 (function(){
+var priorityProductNames={{.ImportantProductNames}};
+function priorityProductRank(name){return priorityProductNames.indexOf(stringValue(name))}
 function pad(n){return n<10?'0'+n:''+n}
 function duration(seconds){
   return pad(Math.floor(seconds/3600))+':'+pad(Math.floor((seconds%3600)/60))+':'+pad(seconds%60);
 }
 function setStatus(card,status,label,countdown){
-  card.classList.remove('onsale','upcoming','ended');
+  card.classList.remove('onsale','upcoming','ended','priority');
   card.classList.add(status);
+  var priority=status==='onsale'&&parseInt(card.getAttribute('data-priority-rank'),10)>=0;
+  if(priority)card.classList.add('priority');
+  var name=card.querySelector('strong');
+  name.textContent=(priority?'❗ ':'')+stringValue(card.getAttribute('data-product-name'));
   var badge=card.querySelector('.tag');
   badge.classList.remove('tag-ok','tag-up','tag-end');
   badge.classList.add(status==='onsale'?'tag-ok':status==='upcoming'?'tag-up':'tag-end');
@@ -126,13 +147,68 @@ function updateCard(card,now){
 function updateCountdowns(){
   var now=Math.floor(Date.now()/1000);
   document.querySelectorAll('[data-start-at][data-end-at]').forEach(function(card){updateCard(card,now)});
+  sortProductCards();
 }
 function stringValue(value){return value===null||value===undefined?'':String(value)}
-function buildProductCard(product){
+function compareProductNames(left,right){
+  var leftPoints=Array.from(stringValue(left)),rightPoints=Array.from(stringValue(right));
+  var length=Math.min(leftPoints.length,rightPoints.length);
+  for(var i=0;i<length;i++){
+    var leftCode=leftPoints[i].codePointAt(0),rightCode=rightPoints[i].codePointAt(0);
+    if(leftCode!==rightCode)return leftCode-rightCode;
+  }
+  return leftPoints.length-rightPoints.length;
+}
+function productStatusRank(product,now){
+  var start=parseInt(product.start_at,10),end=parseInt(product.end_at,10);
+  if(Number.isFinite(start)&&Number.isFinite(end)){
+    if(now<start)return 2;
+    if(now<end)return priorityProductRank(product.name)>=0?0:1;
+    return 3;
+  }
+  if(product.is_on_sale)return priorityProductRank(product.name)>=0?0:1;
+  return product.is_upcoming?2:3;
+}
+function sortSnapshotProducts(products,timeSlots){
+  var now=Math.floor(Date.now()/1000),slotOrder={};
+  timeSlots.forEach(function(slot,index){slotOrder[slot.label]=index});
+  return products.slice().sort(function(left,right){
+    var leftGroup=productStatusRank(left,now),rightGroup=productStatusRank(right,now);
+    if(leftGroup!==rightGroup)return leftGroup-rightGroup;
+    if(leftGroup===0){
+      var leftPriority=priorityProductRank(left.name),rightPriority=priorityProductRank(right.name);
+      if(leftPriority!==rightPriority)return leftPriority-rightPriority;
+    }
+    var leftSlot=Object.prototype.hasOwnProperty.call(slotOrder,left.slot_label)?slotOrder[left.slot_label]:timeSlots.length;
+    var rightSlot=Object.prototype.hasOwnProperty.call(slotOrder,right.slot_label)?slotOrder[right.slot_label]:timeSlots.length;
+    if(leftSlot!==rightSlot)return leftSlot-rightSlot;
+    return compareProductNames(left.name,right.name);
+  });
+}
+function sortProductCards(){
+  var list=document.getElementById('product-list');
+  if(!list)return;
+  Array.from(list.children).sort(function(left,right){
+    var group=function(card){return card.classList.contains('priority')?0:card.classList.contains('onsale')?1:card.classList.contains('upcoming')?2:3};
+    var leftGroup=group(left),rightGroup=group(right);
+    if(leftGroup!==rightGroup)return leftGroup-rightGroup;
+    if(leftGroup===0){
+      var leftPriority=parseInt(left.getAttribute('data-priority-rank'),10),rightPriority=parseInt(right.getAttribute('data-priority-rank'),10);
+      if(leftPriority!==rightPriority)return leftPriority-rightPriority;
+    }
+    var leftSlot=parseInt(left.getAttribute('data-slot-order'),10),rightSlot=parseInt(right.getAttribute('data-slot-order'),10);
+    if(leftSlot!==rightSlot)return leftSlot-rightSlot;
+    return compareProductNames(left.getAttribute('data-product-name'),right.getAttribute('data-product-name'));
+  }).forEach(function(card){list.appendChild(card)});
+}
+function buildProductCard(product,slotOrder){
   var card=document.createElement('div');
   card.className='card';
   card.setAttribute('data-start-at',stringValue(product.start_at));
   card.setAttribute('data-end-at',stringValue(product.end_at));
+  card.setAttribute('data-product-name',stringValue(product.name));
+  card.setAttribute('data-priority-rank',stringValue(priorityProductRank(product.name)));
+  card.setAttribute('data-slot-order',stringValue(Object.prototype.hasOwnProperty.call(slotOrder,product.slot_label)?slotOrder[product.slot_label]:Object.keys(slotOrder).length));
   var name=document.createElement('strong');
   name.textContent=product.name;
   card.appendChild(name);
@@ -165,7 +241,9 @@ function renderSnapshot(snapshot){
     slots.appendChild(slot);
   });
   var products=document.createDocumentFragment();
-  snapshot.products.forEach(function(product){products.appendChild(buildProductCard(product))});
+  var slotOrder={};
+  snapshot.time_slots.forEach(function(slot,index){slotOrder[slot.label]=index});
+  sortSnapshotProducts(snapshot.products,snapshot.time_slots).forEach(function(product){products.appendChild(buildProductCard(product,slotOrder))});
   document.getElementById('summary').textContent='📅 更新时间: '+stringValue(snapshot.updated_at)+'   📦 '+stringValue(snapshot.total_count)+'件 ✅ '+stringValue(snapshot.on_sale_count)+'件在售';
   document.getElementById('time-slots').replaceChildren(slots);
   document.getElementById('product-list').replaceChildren(products);

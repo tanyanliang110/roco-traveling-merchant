@@ -52,12 +52,7 @@ func RunOnce(ctx context.Context, cfg Config, outputDir, statePath string, deps 
 		return err
 	}
 
-	onSale := make([]Product, 0, result.OnSaleCount)
-	for _, product := range result.Products {
-		if product.IsOnSale {
-			onSale = append(onSale, product)
-		}
-	}
+	onSale := prepareNotificationProducts(result.Products, result.TimeSlots)
 	pending := state.Pending(onSale, now)
 	if serverChanConfigured(cfg.ServerChan.SendKey) && len(pending) > 0 {
 		if deps.Notify == nil {
@@ -167,7 +162,7 @@ func run(args []string, getenv func(string) string) error {
 			return FetchProducts(ctx, merchantClient, cfg.Crawl.TargetURL, fetchedAt)
 		},
 		Notify: func(ctx context.Context, products []Product) error {
-			title := fmt.Sprintf("🏪 远行商人更新 · %d 件在售", len(products))
+			title := notificationTitle(products)
 			slot := "未知时段"
 			if len(products) > 0 && products[0].SlotLabel != "" {
 				slot = products[0].SlotLabel

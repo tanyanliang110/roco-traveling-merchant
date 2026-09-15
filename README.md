@@ -114,6 +114,147 @@ GitHub 明确说明 `schedule` 在 Actions 高负载时可能延迟，极端情�
 
 公开仓库若连续 60 天没有仓库活动，GitHub 可能自动禁用定时工作流。发现页面不再更新时，到 Actions 页面重新启用工作流并用 `workflow_dispatch` 手动运行一次。详见 [GitHub 的工作流启用/禁用说明](https://docs.github.com/en/actions/managing-workflow-runs-and-deployments/managing-workflow-runs/disabling-and-enabling-a-workflow)。
 
+### 可选：Cloudflare Worker 可靠调度与自愈
+
+这是为需要额外调度保障的 Fork 使用者准备的**可选**方案；不配置它也能正常使用。Cloudflare Worker 只负责触发和监控，Go 抓取、通知和 GitHub Pages 仍由 GitHub Actions 完成。不要把抓取逻辑、`SERVERCHAN_SENDKEY` 或 Pages 发布逻辑搬到 Worker。
+
+GitHub 内置 schedule 仍作为备用。它和 Worker 同时触发时可能产生额外运行；只有成功写回 `gh-pages/state.json` 后，后续串行运行通常才不会重复对已成功发送的商品通知。这个去重状态不是“至少一次通知”的保证：若通知已送达但状态发布前失败或被取消，仍可能重复发送并影响额度；仍应留意 Actions 的实际运行次数和额度。
+
+#### 1. 为自己的 Fork 创建最小权限 Token
+
+1. 在 GitHub **Settings → Developer settings → Personal access tokens → Fine-grained tokens** 创建一个 `fine-grained personal access token`，设置尽可能短的过期时间。
+2. Resource owner 选择自己的账号；Repository access 选择 **Only select repositories**，并且只选择自己的 Fork（不要选择上游仓库或 “All repositories”）。
+3. 在 Repository permissions 中把 **Actions: Read and write** 设为允许；不要额外授予不需要的权限。这个权限用于触发工作流和读取/取消卡住的运行。
+4. 复制 Token 后立即妥善保存。它只会用作 Worker 的 `GITHUB_TOKEN`，不得提交、粘贴到日志或发送给他人。
+
+#### 2. 创建 Worker 和 Secret
+
+1. 打开 Cloudflare Dashboard，创建 Worker 时选择 **Start with Hello World**，不要选择 Import a repository；本教程使用 Dashboard 中的单文件 Worker，而不是让 Cloudflare 读取仓库源码。
+2. 把下面完整示例粘贴到 Worker 编辑器。只编辑 `OWNER` 和 `REPO` 这两个非秘密占位值，分别填入你的 GitHub 用户名和 Fork 仓库名。
+3. 在 Worker 的 **Settings → Variables and Secrets** 中添加 Secret：名称为 `GITHUB_TOKEN`，值为刚创建的 PAT，并选择加密/Secret 类型。`GITHUB_TOKEN` 必须是 Cloudflare Secret，不要写入 Worker 源码、常量、README 截图或 GitHub Secret。
+4. 保存并部署 Worker。部署不会自动创建 cron；下一步必须在 Dashboard 注册它们。
+
+```js
+// 只编辑这两个非秘密值；Token 由 Cloudflare Secret GITHUB_TOKEN 提供。
+const OWNER = "<你的 GitHub 用户名>";
+const REPO = "<你的 Fork 仓库名>";
+
+export const REGULAR_CRON = "2-59/10 0-15 * * *";
+export const WATCHDOG_CRON = "9-59/10 0-15 * * *";
+const STALE_AFTER_MS = 5 * 60 * 1000;
+const API_ROOT = `https://api.github.com/repos/${OWNER}/${REPO}`;
+const ACTIVE_STATUSES = new Set([
+  "in_progress",
+  "pending",
+  "queued",
+  "requested",
+  "waiting",
+]);
+
+function requestHeaders(token) {
+  if (!token) throw new Error("Missing Cloudflare Secret GITHUB_TOKEN");
+  return {
+    Accept: "application/vnd.github+json",
+    Authorization: `Bearer ${token}`,
+    "Content-Type": "application/json",
+    "User-Agent": "roco-cloudflare-scheduler",
+    "X-GitHub-Api-Version": "2022-11-28",
+  };
+}
+
+async function dispatchWorkflow(env, fetchImpl) {
+  const response = await fetchImpl(
+    `${API_ROOT}/actions/workflows/update.yml/dispatches`,
+    {
+      method: "POST",
+      headers: requestHeaders(env.GITHUB_TOKEN),
+      body: JSON.stringify({ ref: "main" }),
+    },
+  );
+  if (!response.ok) {
+    throw new Error(`GitHub workflow dispatch failed: ${response.status}`);
+  }
+}
+
+async function cancelStaleRuns(env, fetchImpl, nowMs) {
+  const cancellationFailures = [];
+  for (const status of ACTIVE_STATUSES) {
+    const response = await fetchImpl(
+      `${API_ROOT}/actions/workflows/update.yml/runs?${new URLSearchParams({
+        status,
+        branch: "main",
+        per_page: "100",
+      })}`,
+      { method: "GET", headers: requestHeaders(env.GITHUB_TOKEN) },
+    );
+    if (!response.ok) {
+      throw new Error(`GitHub list workflow runs failed: ${response.status}`);
+    }
+
+    const payload = await response.json();
+    const runs = Array.isArray(payload.workflow_runs) ? payload.workflow_runs : [];
+    for (const run of runs) {
+      if (!ACTIVE_STATUSES.has(run.status)) continue;
+      const startedAt = Date.parse(run.run_started_at) || Date.parse(run.created_at);
+      // 仅严格超过五分钟才取消；正好五分钟仍保留。
+      if (!Number.isFinite(startedAt) || nowMs - startedAt <= STALE_AFTER_MS) {
+        continue;
+      }
+
+      const cancelResponse = await fetchImpl(
+        `${API_ROOT}/actions/runs/${run.id}/cancel`,
+        { method: "POST", headers: requestHeaders(env.GITHUB_TOKEN) },
+      );
+      // 已完成和竞争导致的 409 无害；其他失败逐项汇总，继续处理剩余运行。
+      if (!cancelResponse.ok && cancelResponse.status !== 409) {
+        cancellationFailures.push(`${run.id}: ${cancelResponse.status}`);
+      }
+    }
+  }
+  if (cancellationFailures.length > 0) {
+    throw new Error(
+      `GitHub workflow cancellations failed: ${cancellationFailures.join(", ")}`,
+    );
+  }
+}
+
+async function handleScheduled(cron, env, fetchImpl = fetch, nowMs = Date.now()) {
+  if (cron === REGULAR_CRON) {
+    await dispatchWorkflow(env, fetchImpl);
+  } else if (cron === WATCHDOG_CRON) {
+    // 自愈只取消严格超时的运行，不补跑；下一次正常 cron 会再触发一次。
+    await cancelStaleRuns(env, fetchImpl, nowMs);
+  }
+}
+
+export default {
+  async scheduled(controller, env, ctx) {
+    ctx.waitUntil(handleScheduled(controller.cron, env));
+  },
+  fetch() {
+    return new Response("Roco scheduler is active.");
+  },
+};
+```
+
+#### 3. 在 Dashboard 真正注册两个计划
+
+到 Worker 的 **Settings → Cron Triggers**，分别添加下面两个 UTC cron（Cloudflare 的界面可能把这一页显示为 Triggers 下的 Cron Triggers）：
+
+| 用途 | Cron | 行为 |
+| --- | --- | --- |
+| 正常触发 | `2-59/10 0-15 * * *` | 对 `main` 发送 `update.yml` 的 `workflow_dispatch`。 |
+| 自愈检查 | `9-59/10 0-15 * * *` | 只检查 `main` 上处于 active status 的运行；严格超过 5 分钟才逐项取消。 |
+
+Settings → Cron Triggers 中的记录才真正注册计划；代码中的 cron 常量只用于分流 `scheduled` 事件，单独部署代码不会让 cron 自动生效。自愈取消接口返回 `409` 时表示竞争中的无害结果；示例会继续检查其他运行，汇总逐项取消失败后报错，且不补跑工作流。
+
+#### 4. 验证、轮换与安全
+
+1. 先在 GitHub Actions 页面手动运行一次 `Update static pages`，确认 Fork、`main` 和 Pages 已按上文配置成功；然后等待下一次 Worker 正常 cron，在 Actions 页面按事件类型确认 Worker 只产生一个 `workflow_dispatch`。同一分钟可能另有 `schedule` 运行。
+2. 观察一次自愈 cron 的 Worker 日志。可通过创建一个测试用、超过 5 分钟仍为 active 的运行来验证取消；不要为测试取消正在需要的运行。确认 `409` 不会报错，其他逐项取消失败会在日志中一起出现，且 Worker 不会补跑。
+3. 进行 Token 轮换或撤销时，先在 Cloudflare 更新 `GITHUB_TOKEN` Secret 并验证新 Token，再在 GitHub Token 页面撤销旧 Token。若怀疑泄露，立即撤销而不是等待过期，并检查 Actions/Worker 日志。
+4. 不要在代码、提交、截图、日志或支持请求中泄露 PAT；定期审查 Token 的仓库范围与过期时间。Cloudflare 的免费额度和安全规则以官方当前规则为准，同时参阅 [Cron Triggers](https://developers.cloudflare.com/workers/configuration/cron-triggers/)、[Secrets](https://developers.cloudflare.com/workers/configuration/secrets/)、[Workers 价格](https://developers.cloudflare.com/workers/platform/pricing/) 以及 [GitHub fine-grained PAT](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)。
+
 ## 免费额度与费用提醒
 
 - GitHub 当前说明：公开仓库使用 standard GitHub-hosted runners 免费；更大型 runner、私有仓库和其他收费资源的规则不同。启用 Fork 中的工作流前请查看最新的 [GitHub Actions billing and usage](https://docs.github.com/en/actions/concepts/billing-and-usage)，不要把“免费”理解成永久承诺。
