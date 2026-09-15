@@ -2,22 +2,37 @@
   "code": 200,
   "message": "success",
   "data": {
-    "on_sale_count": 1,
+    "on_sale_count": 2,
     "products": [
       {
-        "name": "翼系血脉秘药",
-        "price": "16w",
-        "limit": "限购3",
-        "category": "血脉修改道具",
-        "desc": "能唤醒血脉力量的远古秘药，使精灵获得翼系血脉。 “一段失落的秘密将被重拾。”",
-        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/1/15/t49aceulmmb7q8ohahmkyqvrdl2qdkz.png/100px-Xuemai_yi.png",
+        "name": "电系粉尘",
+        "price": "500",
+        "limit": "限购100",
+        "category": "炼金材料",
+        "desc": "常见的炼金材料，蕴含少量电系魔法，是合成技能石的主要触媒。",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/2/2f/2sux0g15uo8at77bwpoxrg32rv3l4dz.png/100px-100132.png",
         "is_on_sale": true,
         "has_ended": false,
         "is_upcoming": false,
-        "remain": "00:06:45",
-        "slot_label": "12:00-16:00",
-        "start_at": 1789444800,
-        "end_at": 1789459200
+        "remain": "03:56:50",
+        "slot_label": "16:00-20:00",
+        "start_at": 1789459200,
+        "end_at": 1789473600
+      },
+      {
+        "name": "神奇的蛋",
+        "price": "36000",
+        "limit": "限购5",
+        "category": "精灵蛋",
+        "desc": "蕴含着难以捉摸的魔力，不知道可以孵化出哪种精灵。",
+        "image_url": "//img.71acg.net/whd~hykb/comm/hd_admin_upload_2982_5390e1a946446e64d929ad89a3ad3eed.png",
+        "is_on_sale": true,
+        "has_ended": false,
+        "is_upcoming": false,
+        "remain": "03:56:50",
+        "slot_label": "16:00-20:00",
+        "start_at": 1789459200,
+        "end_at": 1789473600
       }
     ],
     "time_slots": [
@@ -34,6 +49,6 @@
         "label": "20:00-24:00"
       }
     ],
-    "updated_at": "2026-09-15 15:53:14"
+    "updated_at": "2026-09-15 16:03:09"
   }
 }
