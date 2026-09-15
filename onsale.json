@@ -2,38 +2,8 @@
   "code": 200,
   "message": "success",
   "data": {
-    "on_sale_count": 3,
+    "on_sale_count": 2,
     "products": [
-      {
-        "name": "黄石榴石",
-        "price": "1000",
-        "limit": "限购100",
-        "category": "炼金材料",
-        "desc": "比较常用的炼金材料，可以用来合成咕噜球和技能石。 特殊的晶体排列解构，精灵打喷嚏可能会令这种晶体发生爆炸。",
-        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/f/f3/c5x5f0lgk33ly801m8w1n9aod8ny4sh.png/100px-100683.png",
-        "is_on_sale": true,
-        "has_ended": false,
-        "is_upcoming": false,
-        "remain": "00:06:29",
-        "slot_label": "20:00-24:00",
-        "start_at": 1789387200,
-        "end_at": 1789401600
-      },
-      {
-        "name": "冰系血脉秘药",
-        "price": "16w",
-        "limit": "限购3",
-        "category": "血脉修改道具",
-        "desc": "能唤醒血脉力量的远古秘药，使精灵获得冰系血脉。 “一段失落的秘密将被重拾。”",
-        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/3/3f/8uweaysx83rtha1qyqpjvd9tsgkdv90.png/100px-Xuemai_bing.png",
-        "is_on_sale": true,
-        "has_ended": false,
-        "is_upcoming": false,
-        "remain": "00:06:29",
-        "slot_label": "20:00-24:00",
-        "start_at": 1789387200,
-        "end_at": 1789401600
-      },
       {
         "name": "神奇的蛋",
         "price": "36000",
@@ -44,10 +14,25 @@
         "is_on_sale": true,
         "has_ended": false,
         "is_upcoming": false,
-        "remain": "00:06:29",
-        "slot_label": "20:00-24:00",
-        "start_at": 1789387200,
-        "end_at": 1789401600
+        "remain": "03:56:47",
+        "slot_label": "08:00-12:00",
+        "start_at": 1789430400,
+        "end_at": 1789444800
+      },
+      {
+        "name": "毒系粉尘",
+        "price": "500",
+        "limit": "限购100",
+        "category": "炼金材料",
+        "desc": "常见的炼金材料，蕴含少量毒系魔法，是合成技能石的主要触媒。",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/4/41/qgthc06nxeq4r9tzejgwwox7qtqp86w.png/100px-100133.png",
+        "is_on_sale": true,
+        "has_ended": false,
+        "is_upcoming": false,
+        "remain": "03:56:47",
+        "slot_label": "08:00-12:00",
+        "start_at": 1789430400,
+        "end_at": 1789444800
       }
     ],
     "time_slots": [
@@ -64,6 +49,6 @@
         "label": "20:00-24:00"
       }
     ],
-    "updated_at": "2026-09-14 23:53:30"
+    "updated_at": "2026-09-15 08:03:12"
   }
 }
