@@ -1,3 +1,5 @@
+✨ **效果展示：[点击查看远行商人实时页面](https://tanyanliang110.github.io/roco-traveling-merchant/)**
+
 # Roco-API 🏪
 
 洛克王国：世界每日远行商人商品查询。项目既能作为本地常驻 HTTP 服务运行，也能由 GitHub Actions 定时执行一次，并把页面和 JSON 发布到 GitHub Pages，全程不需要自有服务器。
@@ -7,9 +9,10 @@
 ## 功能
 
 - 抓取商品名称、价格、限购、分类、描述、图片和销售时段。
+- 在售商品优先展示；炫彩精灵蛋、奇异血脉秘药、首领血脉秘药和棱镜球在售时会置顶并显示特殊提醒。
 - 保留本地 Web 页面以及 `/api/products`、`/api/onsale` 两个 JSON API。
 - 单次生成 `index.html`、`products.json`、`onsale.json`、`state.json`，适合 GitHub Pages。
-- 按“北京时间日期 + 时段 + 商品名”持久化推送状态，备用运行不会重复推送已经成功发送的商品。
+- 按“北京时间日期 + 时段 + 商品名”持久化推送状态；状态成功写回后，后续串行运行通常不会重复推送已经成功发送的商品。
 - 支持 Server酱 Turbo、Server酱³，以及兼容用的完整 HTTP/HTTPS 推送地址。
 
 ## 本地常驻服务
@@ -114,15 +117,17 @@ GitHub 明确说明 `schedule` 在 Actions 高负载时可能延迟，极端情�
 
 公开仓库若连续 60 天没有仓库活动，GitHub 可能自动禁用定时工作流。发现页面不再更新时，到 Actions 页面重新启用工作流并用 `workflow_dispatch` 手动运行一次。详见 [GitHub 的工作流启用/禁用说明](https://docs.github.com/en/actions/managing-workflow-runs-and-deployments/managing-workflow-runs/disabling-and-enabling-a-workflow)。
 
-### 可选：Cloudflare Worker 可靠调度与自愈
+### 建议：使用 Cloudflare Worker 提高调度可靠性
 
-这是为需要额外调度保障的 Fork 使用者准备的**可选**方案；不配置它也能正常使用。Cloudflare Worker 只负责触发和监控，Go 抓取、通知和 GitHub Pages 仍由 GitHub Actions 完成。不要把抓取逻辑、`SERVERCHAN_SENDKEY` 或 Pages 发布逻辑搬到 Worker。
+由于 GitHub 内置 `schedule` 可能延迟、漏触发或长时间排队，建议为自己的 Fork 配置此方案。不配置仍可使用基础流程；Cloudflare Worker 只负责触发和监控，Go 抓取、通知和 GitHub Pages 仍由 GitHub Actions 完成。不要把抓取逻辑、`SERVERCHAN_SENDKEY` 或 Pages 发布逻辑搬到 Worker。
+
+在 Fork 保持为公开仓库、使用 standard GitHub-hosted runner 和 Cloudflare Workers Free、且不超出各服务免费额度的前提下，整套流程可以零付费运行；启用通知时还需遵守 Server酱的免费额度。当前这两个 Worker Cron Triggers 每天合计约 192 次调用，远低于 Workers Free 当前每日 100,000 次请求和每账号 5 个 Cron Triggers 的限制。免费额度和计费规则可能变化，请以本节链接的官方说明为准。
 
 GitHub 内置 schedule 仍作为备用。它和 Worker 同时触发时可能产生额外运行；只有成功写回 `gh-pages/state.json` 后，后续串行运行通常才不会重复对已成功发送的商品通知。这个去重状态不是“至少一次通知”的保证：若通知已送达但状态发布前失败或被取消，仍可能重复发送并影响额度；仍应留意 Actions 的实际运行次数和额度。
 
 #### 1. 为自己的 Fork 创建最小权限 Token
 
-1. 在 GitHub **Settings → Developer settings → Personal access tokens → Fine-grained tokens** 创建一个 `fine-grained personal access token`，设置尽可能短的过期时间。
+1. 在 GitHub **Settings → Developer settings → Personal access tokens → Fine-grained tokens** 创建一个 `fine-grained personal access token`，为避免无人值守调度因 Token 到期中断，个人仓库可根据维护方式选择 No expiration；选择永不过期时必须坚持最小权限、仅限单仓库、妥善保存在 Cloudflare Secret 中，并定期检查和轮换，发现泄露立即撤销。
 2. Resource owner 选择自己的账号；Repository access 选择 **Only select repositories**，并且只选择自己的 Fork（不要选择上游仓库或 “All repositories”）。
 3. 在 Repository permissions 中把 **Actions: Read and write** 设为允许；不要额外授予不需要的权限。这个权限用于触发工作流和读取/取消卡住的运行。
 4. 复制 Token 后立即妥善保存。它只会用作 Worker 的 `GITHUB_TOKEN`，不得提交、粘贴到日志或发送给他人。
@@ -241,10 +246,10 @@ export default {
 
 到 Worker 的 **Settings → Cron Triggers**，分别添加下面两个 UTC cron（Cloudflare 的界面可能把这一页显示为 Triggers 下的 Cron Triggers）：
 
-| 用途 | Cron | 行为 |
-| --- | --- | --- |
-| 正常触发 | `2-59/10 0-15 * * *` | 对 `main` 发送 `update.yml` 的 `workflow_dispatch`。 |
-| 自愈检查 | `9-59/10 0-15 * * *` | 只检查 `main` 上处于 active status 的运行；严格超过 5 分钟才逐项取消。 |
+| 用途     | Cron                   | 行为                                                                         |
+| -------- | ---------------------- | ---------------------------------------------------------------------------- |
+| 正常触发 | `2-59/10 0-15 * * *`  | 对 `main` 发送 `update.yml` 的 `workflow_dispatch`。                          |
+| 自愈检查 | `9-59/10 0-15 * * *`  | 只检查 `main` 上处于 active status 的运行；严格超过 5 分钟才逐项取消。        |
 
 Settings → Cron Triggers 中的记录才真正注册计划；代码中的 cron 常量只用于分流 `scheduled` 事件，单独部署代码不会让 cron 自动生效。自愈取消接口返回 `409` 时表示竞争中的无害结果；示例会继续检查其他运行，汇总逐项取消失败后报错，且不补跑工作流。
 

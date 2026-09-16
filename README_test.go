@@ -80,9 +80,9 @@ func TestReadmeDocumentsWorkflowScopedLeastPrivilege(t *testing.T) {
 	}
 }
 
-// This contract prevents the optional external scheduler guide from silently
+// This contract prevents the recommended external scheduler guide from silently
 // losing the guardrails that keep the GitHub Actions workflow authoritative.
-func TestReadmeDocumentsOptionalCloudflareWorkerSchedulerContract(t *testing.T) {
+func TestReadmeRecommendsFreeCloudflareWorkerSchedulerContract(t *testing.T) {
 	content, err := os.ReadFile("README.md")
 	if err != nil {
 		t.Fatalf("read README: %v", err)
@@ -90,7 +90,13 @@ func TestReadmeDocumentsOptionalCloudflareWorkerSchedulerContract(t *testing.T) 
 	readme := string(content)
 
 	required := []string{
-		"可选：Cloudflare Worker 可靠调度与自愈",
+		"建议：使用 Cloudflare Worker 提高调度可靠性",
+		"建议为自己的 Fork 配置此方案",
+		"整套流程可以零付费运行",
+		"公开仓库",
+		"standard GitHub-hosted runner",
+		"Cloudflare Workers Free",
+		"免费额度",
 		"Cloudflare Worker 只负责触发和监控",
 		"Go 抓取、通知和 GitHub Pages 仍由 GitHub Actions 完成",
 		"Start with Hello World",
@@ -134,11 +140,23 @@ func TestReadmeDocumentsOptionalCloudflareWorkerSchedulerContract(t *testing.T) 
 	}
 	for _, want := range required {
 		if !strings.Contains(readme, want) {
-			t.Errorf("README is missing optional Worker scheduler guidance %q", want)
+			t.Errorf("README is missing recommended Worker scheduler guidance %q", want)
 		}
 	}
 
 	if strings.Contains(readme, "`gh-pages/state.json` 中的去重状态会避免对已成功发送的商品重复通知") {
 		t.Error("README makes an unconditional state-deduplication promise")
+	}
+}
+
+// This test fails if the feature summary promises unconditional notification
+// deduplication despite the documented delivery-before-state-write window.
+func TestReadmeDoesNotPromiseUnconditionalNotificationDeduplication(t *testing.T) {
+	content, err := os.ReadFile("README.md")
+	if err != nil {
+		t.Fatalf("read README: %v", err)
+	}
+	if strings.Contains(string(content), "备用运行不会重复推送已经成功发送的商品") {
+		t.Fatal("README feature summary makes an unconditional deduplication promise")
 	}
 }
