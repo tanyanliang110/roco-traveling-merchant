@@ -18,21 +18,6 @@
     ],
     "products": [
       {
-        "name": "魔力果",
-        "price": "6000",
-        "limit": "限购20",
-        "category": "精灵喂养材料",
-        "desc": "不太常见的果实，精灵食用后获得能力提升。 “精灵食物营养科的研究总是不见进展，这么多年了精灵还在吃果子。”",
-        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/c/c6/5qe6rcdtfxe1gsrvgj3lrn033athx9p.png/100px-100668.png",
-        "is_on_sale": true,
-        "has_ended": false,
-        "is_upcoming": false,
-        "remain": "00:06:40",
-        "slot_label": "20:00-24:00",
-        "start_at": 1789560000,
-        "end_at": 1789574400
-      },
-      {
         "name": "奇异血脉秘药",
         "price": "16w",
         "limit": "限购3",
@@ -136,10 +121,25 @@
         "slot_label": "16:00-20:00",
         "start_at": 1789545600,
         "end_at": 1789560000
+      },
+      {
+        "name": "魔力果",
+        "price": "6000",
+        "limit": "限购20",
+        "category": "精灵喂养材料",
+        "desc": "不太常见的果实，精灵食用后获得能力提升。 “精灵食物营养科的研究总是不见进展，这么多年了精灵还在吃果子。”",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/c/c6/5qe6rcdtfxe1gsrvgj3lrn033athx9p.png/100px-100668.png",
+        "is_on_sale": false,
+        "has_ended": true,
+        "is_upcoming": false,
+        "remain": "",
+        "slot_label": "20:00-24:00",
+        "start_at": 1789560000,
+        "end_at": 1789574400
       }
     ],
-    "on_sale_count": 1,
+    "on_sale_count": 0,
     "total_count": 8,
-    "updated_at": "2026-09-16 23:53:19"
+    "updated_at": "2026-09-17 01:46:04"
   }
 }
