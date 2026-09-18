@@ -2,37 +2,52 @@
   "code": 200,
   "message": "success",
   "data": {
-    "on_sale_count": 2,
+    "on_sale_count": 3,
     "products": [
       {
-        "name": "武系粉尘",
-        "price": "500",
-        "limit": "限购100",
-        "category": "炼金材料",
-        "desc": "常见的炼金材料，蕴含少量武系魔法，是合成技能石的主要触媒。",
-        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/2/23/su3uy9wfjwvx3ifjaia3l88j2kjr5mg.png/100px-100135.png",
+        "name": "变幻球",
+        "price": "3000",
+        "limit": "限购200",
+        "category": "特制咕噜球",
+        "desc": "更适合用来捕捉幻系、机械系的精灵。 难以揣测的球。",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/9/97/t58zrpfzxopvj3ke3oi3v57mf6k05s0.png/100px-Img_miwuqiu.png",
         "is_on_sale": true,
         "has_ended": false,
         "is_upcoming": false,
-        "remain": "00:06:39",
-        "slot_label": "16:00-20:00",
-        "start_at": 1789718400,
-        "end_at": 1789732800
+        "remain": "03:56:31",
+        "slot_label": "20:00-24:00",
+        "start_at": 1789732800,
+        "end_at": 1789747200
       },
       {
-        "name": "翼系血脉秘药",
+        "name": "火系血脉秘药",
         "price": "16w",
         "limit": "限购3",
         "category": "血脉修改道具",
-        "desc": "能唤醒血脉力量的远古秘药，使精灵获得翼系血脉。 “一段失落的秘密将被重拾。”",
-        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/1/15/t49aceulmmb7q8ohahmkyqvrdl2qdkz.png/100px-Xuemai_yi.png",
+        "desc": "能唤醒血脉力量的远古秘药，使精灵获得火系血脉。 “一段失落的秘密将被重拾。”",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/5/58/qcen9i07u68symzdrga5qcli2wq6ws3.png/100px-Xuemai_huo.png",
         "is_on_sale": true,
         "has_ended": false,
         "is_upcoming": false,
-        "remain": "00:06:39",
-        "slot_label": "16:00-20:00",
-        "start_at": 1789718400,
-        "end_at": 1789732800
+        "remain": "03:56:31",
+        "slot_label": "20:00-24:00",
+        "start_at": 1789732800,
+        "end_at": 1789747200
+      },
+      {
+        "name": "魔力果",
+        "price": "6000",
+        "limit": "限购20",
+        "category": "精灵喂养材料",
+        "desc": "不太常见的果实，精灵食用后获得能力提升。 “精灵食物营养科的研究总是不见进展，这么多年了精灵还在吃果子。”",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/c/c6/5qe6rcdtfxe1gsrvgj3lrn033athx9p.png/100px-100668.png",
+        "is_on_sale": true,
+        "has_ended": false,
+        "is_upcoming": false,
+        "remain": "03:56:31",
+        "slot_label": "20:00-24:00",
+        "start_at": 1789732800,
+        "end_at": 1789747200
       }
     ],
     "time_slots": [
@@ -49,6 +64,6 @@
         "label": "20:00-24:00"
       }
     ],
-    "updated_at": "2026-09-18 19:53:20"
+    "updated_at": "2026-09-18 20:03:28"
   }
 }
