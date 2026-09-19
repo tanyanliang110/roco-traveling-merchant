@@ -5,19 +5,19 @@
     "on_sale_count": 1,
     "products": [
       {
-        "name": "黄石榴石",
-        "price": "1000",
-        "limit": "限购100",
-        "category": "炼金材料",
-        "desc": "比较常用的炼金材料，可以用来合成咕噜球和技能石。 特殊的晶体排列解构，精灵打喷嚏可能会令这种晶体发生爆炸。",
-        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/f/f3/c5x5f0lgk33ly801m8w1n9aod8ny4sh.png/100px-100683.png",
+        "name": "萌系血脉秘药",
+        "price": "16w",
+        "limit": "限购3",
+        "category": "血脉修改道具",
+        "desc": "能唤醒血脉力量的远古秘药，使精灵获得萌系血脉。 “一段失落的秘密将被重拾。”",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/a/a9/f93cxq6r5qxkkt6cs8hc2jaecsj3yy9.png/100px-Xuemai_meng.png",
         "is_on_sale": true,
         "has_ended": false,
         "is_upcoming": false,
-        "remain": "00:06:44",
-        "slot_label": "12:00-16:00",
-        "start_at": 1789790400,
-        "end_at": 1789804800
+        "remain": "03:57:28",
+        "slot_label": "16:00-20:00",
+        "start_at": 1789804800,
+        "end_at": 1789819200
       }
     ],
     "time_slots": [
@@ -34,6 +34,6 @@
         "label": "20:00-24:00"
       }
     ],
-    "updated_at": "2026-09-19 15:53:15"
+    "updated_at": "2026-09-19 16:02:31"
   }
 }
