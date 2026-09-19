@@ -2,8 +2,24 @@
   "code": 200,
   "message": "success",
   "data": {
-    "on_sale_count": 0,
-    "products": [],
+    "on_sale_count": 1,
+    "products": [
+      {
+        "name": "翼系粉尘",
+        "price": "500",
+        "limit": "限购100",
+        "category": "炼金材料",
+        "desc": "常见的炼金材料，蕴含少量翼系魔法，是合成技能石的主要触媒。",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/3/35/5mp1ohcm72pgsxax5kq3x1aophw3lh0.png/100px-100136.png",
+        "is_on_sale": true,
+        "has_ended": false,
+        "is_upcoming": false,
+        "remain": "03:56:43",
+        "slot_label": "08:00-12:00",
+        "start_at": 1789776000,
+        "end_at": 1789790400
+      }
+    ],
     "time_slots": [
       {
         "label": "08:00-12:00"
@@ -18,6 +34,6 @@
         "label": "20:00-24:00"
       }
     ],
-    "updated_at": "2026-09-19 01:02:40"
+    "updated_at": "2026-09-19 08:03:16"
   }
 }
