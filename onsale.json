@@ -5,49 +5,49 @@
     "on_sale_count": 3,
     "products": [
       {
-        "name": "祝福项坠",
-        "price": "80w",
-        "limit": "限购1",
-        "category": "珍稀货币",
-        "desc": "进行精灵赐福的必要道具。能容纳祝福的神秘容器。",
-        "image_url": "//img.71acg.net/whd~hykb/comm/hd_admin_upload_2982_56aa7234a2be18aae2069541da77b555.png",
+        "name": "国王球",
+        "price": "16w",
+        "limit": "限购3",
+        "category": "咕噜球",
+        "desc": "昂贵且好用的咕噜球，能十分轻易地捕捉精灵，并能提升精灵的天分。 曾经专供贵族使用，制作方法不明。",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/2/2e/jygbfxpdbup5weqy4zaqnyaw2fcfyrq.png/100px-100255.png",
         "is_on_sale": true,
         "has_ended": false,
         "is_upcoming": false,
-        "remain": "00:06:47",
-        "slot_label": "08:00-12:00",
-        "start_at": 1789862400,
-        "end_at": 1789876800
+        "remain": "03:56:43",
+        "slot_label": "12:00-16:00",
+        "start_at": 1789876800,
+        "end_at": 1789891200
       },
       {
-        "name": "神奇的蛋",
-        "price": "36000",
-        "limit": "限购5",
-        "category": "精灵蛋",
-        "desc": "蕴含着难以捉摸的魔力，不知道可以孵化出哪种精灵。",
-        "image_url": "//img.71acg.net/whd~hykb/comm/hd_admin_upload_2982_5390e1a946446e64d929ad89a3ad3eed.png",
-        "is_on_sale": true,
-        "has_ended": false,
-        "is_upcoming": false,
-        "remain": "00:06:47",
-        "slot_label": "08:00-12:00",
-        "start_at": 1789862400,
-        "end_at": 1789876800
-      },
-      {
-        "name": "蓝晶碧玺",
-        "price": "1000",
+        "name": "毒系粉尘",
+        "price": "500",
         "limit": "限购100",
         "category": "炼金材料",
-        "desc": "比较常用的炼金材料，可以用来合成咕噜球和技能石。 某些晶石蜗会产出珍贵的粉蓝色碧玺，为此商人翻着花样研究晶石蜗的食谱喜好。",
-        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/c/c5/k8wzdzechd88qs9bxuvcnyg0pv4tzl4.png/100px-100681.png",
+        "desc": "常见的炼金材料，蕴含少量毒系魔法，是合成技能石的主要触媒。",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/4/41/qgthc06nxeq4r9tzejgwwox7qtqp86w.png/100px-100133.png",
         "is_on_sale": true,
         "has_ended": false,
         "is_upcoming": false,
-        "remain": "00:06:47",
-        "slot_label": "08:00-12:00",
-        "start_at": 1789862400,
-        "end_at": 1789876800
+        "remain": "03:56:43",
+        "slot_label": "12:00-16:00",
+        "start_at": 1789876800,
+        "end_at": 1789891200
+      },
+      {
+        "name": "草系粉尘",
+        "price": "500",
+        "limit": "限购100",
+        "category": "炼金材料",
+        "desc": "常见的炼金材料，蕴含少量草系魔法，是合成技能石的主要触媒。",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/3/32/2k88qbruf464xxyf02grnmkvun59h0c.png/100px-100121.png",
+        "is_on_sale": true,
+        "has_ended": false,
+        "is_upcoming": false,
+        "remain": "03:56:43",
+        "slot_label": "12:00-16:00",
+        "start_at": 1789876800,
+        "end_at": 1789891200
       }
     ],
     "time_slots": [
@@ -64,6 +64,6 @@
         "label": "20:00-24:00"
       }
     ],
-    "updated_at": "2026-09-20 11:53:12"
+    "updated_at": "2026-09-20 12:03:16"
   }
 }
