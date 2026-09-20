@@ -2,54 +2,8 @@
   "code": 200,
   "message": "success",
   "data": {
-    "on_sale_count": 3,
-    "products": [
-      {
-        "name": "光系粉尘",
-        "price": "500",
-        "limit": "限购100",
-        "category": "炼金材料",
-        "desc": "常见的炼金材料，蕴含少量光系魔法，是合成技能石的主要触媒。",
-        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/9/9d/t3udkq5fg8o3je088pcjktersn9wfrt.png/100px-100124.png",
-        "is_on_sale": true,
-        "has_ended": false,
-        "is_upcoming": false,
-        "remain": "00:06:44",
-        "slot_label": "20:00-24:00",
-        "start_at": 1789905600,
-        "end_at": 1789920000
-      },
-      {
-        "name": "变幻球",
-        "price": "3000",
-        "limit": "限购200",
-        "category": "特制咕噜球",
-        "desc": "更适合用来捕捉幻系、机械系的精灵。 难以揣测的球。",
-        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/9/97/t58zrpfzxopvj3ke3oi3v57mf6k05s0.png/100px-Img_miwuqiu.png",
-        "is_on_sale": true,
-        "has_ended": false,
-        "is_upcoming": false,
-        "remain": "00:06:44",
-        "slot_label": "20:00-24:00",
-        "start_at": 1789905600,
-        "end_at": 1789920000
-      },
-      {
-        "name": "普通粉尘",
-        "price": "500",
-        "limit": "限购100",
-        "category": "炼金材料",
-        "desc": "常见的炼金材料，蕴含少量普通系魔法，是合成技能石的主要触媒。",
-        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/f/f6/ls7hsygs9epizddf1xo4q9b2iu1dduu.png/100px-100127.png",
-        "is_on_sale": true,
-        "has_ended": false,
-        "is_upcoming": false,
-        "remain": "00:06:44",
-        "slot_label": "20:00-24:00",
-        "start_at": 1789905600,
-        "end_at": 1789920000
-      }
-    ],
+    "on_sale_count": 0,
+    "products": [],
     "time_slots": [
       {
         "label": "08:00-12:00"
@@ -64,6 +18,6 @@
         "label": "20:00-24:00"
       }
     ],
-    "updated_at": "2026-09-20 23:53:15"
+    "updated_at": "2026-09-21 00:52:03"
   }
 }
