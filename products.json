@@ -18,49 +18,19 @@
     ],
     "products": [
       {
-        "name": "国王球",
-        "price": "16w",
-        "limit": "限购3",
-        "category": "咕噜球",
-        "desc": "昂贵且好用的咕噜球，能十分轻易地捕捉精灵，并能提升精灵的天分。 曾经专供贵族使用，制作方法不明。",
-        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/2/2e/jygbfxpdbup5weqy4zaqnyaw2fcfyrq.png/100px-100255.png",
+        "name": "炫彩蛋",
+        "price": "160w",
+        "limit": "限购1",
+        "category": "精灵蛋",
+        "desc": "蕴含着难以捉摸的魔力，必定孵化出“炫彩”外观、“了不起”天分的精灵。",
+        "image_url": "//img.71acg.net/whd~hykb/comm/hd_admin_upload_2982_d3f07a7c316e2b71dc3e5fc1871bd6da.png",
         "is_on_sale": true,
         "has_ended": false,
         "is_upcoming": false,
-        "remain": "00:06:36",
-        "slot_label": "12:00-16:00",
-        "start_at": 1789876800,
-        "end_at": 1789891200
-      },
-      {
-        "name": "毒系粉尘",
-        "price": "500",
-        "limit": "限购100",
-        "category": "炼金材料",
-        "desc": "常见的炼金材料，蕴含少量毒系魔法，是合成技能石的主要触媒。",
-        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/4/41/qgthc06nxeq4r9tzejgwwox7qtqp86w.png/100px-100133.png",
-        "is_on_sale": true,
-        "has_ended": false,
-        "is_upcoming": false,
-        "remain": "00:06:36",
-        "slot_label": "12:00-16:00",
-        "start_at": 1789876800,
-        "end_at": 1789891200
-      },
-      {
-        "name": "草系粉尘",
-        "price": "500",
-        "limit": "限购100",
-        "category": "炼金材料",
-        "desc": "常见的炼金材料，蕴含少量草系魔法，是合成技能石的主要触媒。",
-        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/3/32/2k88qbruf464xxyf02grnmkvun59h0c.png/100px-100121.png",
-        "is_on_sale": true,
-        "has_ended": false,
-        "is_upcoming": false,
-        "remain": "00:06:36",
-        "slot_label": "12:00-16:00",
-        "start_at": 1789876800,
-        "end_at": 1789891200
+        "remain": "03:56:45",
+        "slot_label": "16:00-20:00",
+        "start_at": 1789891200,
+        "end_at": 1789905600
       },
       {
         "name": "变幻球",
@@ -121,10 +91,55 @@
         "slot_label": "08:00-12:00",
         "start_at": 1789862400,
         "end_at": 1789876800
+      },
+      {
+        "name": "国王球",
+        "price": "16w",
+        "limit": "限购3",
+        "category": "咕噜球",
+        "desc": "昂贵且好用的咕噜球，能十分轻易地捕捉精灵，并能提升精灵的天分。 曾经专供贵族使用，制作方法不明。",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/2/2e/jygbfxpdbup5weqy4zaqnyaw2fcfyrq.png/100px-100255.png",
+        "is_on_sale": false,
+        "has_ended": true,
+        "is_upcoming": false,
+        "remain": "",
+        "slot_label": "12:00-16:00",
+        "start_at": 1789876800,
+        "end_at": 1789891200
+      },
+      {
+        "name": "毒系粉尘",
+        "price": "500",
+        "limit": "限购100",
+        "category": "炼金材料",
+        "desc": "常见的炼金材料，蕴含少量毒系魔法，是合成技能石的主要触媒。",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/4/41/qgthc06nxeq4r9tzejgwwox7qtqp86w.png/100px-100133.png",
+        "is_on_sale": false,
+        "has_ended": true,
+        "is_upcoming": false,
+        "remain": "",
+        "slot_label": "12:00-16:00",
+        "start_at": 1789876800,
+        "end_at": 1789891200
+      },
+      {
+        "name": "草系粉尘",
+        "price": "500",
+        "limit": "限购100",
+        "category": "炼金材料",
+        "desc": "常见的炼金材料，蕴含少量草系魔法，是合成技能石的主要触媒。",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/3/32/2k88qbruf464xxyf02grnmkvun59h0c.png/100px-100121.png",
+        "is_on_sale": false,
+        "has_ended": true,
+        "is_upcoming": false,
+        "remain": "",
+        "slot_label": "12:00-16:00",
+        "start_at": 1789876800,
+        "end_at": 1789891200
       }
     ],
-    "on_sale_count": 3,
-    "total_count": 7,
-    "updated_at": "2026-09-20 15:53:23"
+    "on_sale_count": 1,
+    "total_count": 8,
+    "updated_at": "2026-09-20 16:03:14"
   }
 }
