@@ -18,19 +18,19 @@
     ],
     "products": [
       {
-        "name": "炫彩蛋",
-        "price": "160w",
-        "limit": "限购1",
-        "category": "精灵蛋",
-        "desc": "蕴含着难以捉摸的魔力，必定孵化出“炫彩”外观、“了不起”天分的精灵。",
-        "image_url": "//img.71acg.net/whd~hykb/comm/hd_admin_upload_2982_d3f07a7c316e2b71dc3e5fc1871bd6da.png",
+        "name": "光系粉尘",
+        "price": "500",
+        "limit": "限购100",
+        "category": "炼金材料",
+        "desc": "常见的炼金材料，蕴含少量光系魔法，是合成技能石的主要触媒。",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/9/9d/t3udkq5fg8o3je088pcjktersn9wfrt.png/100px-100124.png",
         "is_on_sale": true,
         "has_ended": false,
         "is_upcoming": false,
-        "remain": "00:06:39",
-        "slot_label": "16:00-20:00",
-        "start_at": 1789891200,
-        "end_at": 1789905600
+        "remain": "03:56:19",
+        "slot_label": "20:00-24:00",
+        "start_at": 1789905600,
+        "end_at": 1789920000
       },
       {
         "name": "变幻球",
@@ -39,10 +39,25 @@
         "category": "特制咕噜球",
         "desc": "更适合用来捕捉幻系、机械系的精灵。 难以揣测的球。",
         "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/9/97/t58zrpfzxopvj3ke3oi3v57mf6k05s0.png/100px-Img_miwuqiu.png",
-        "is_on_sale": false,
+        "is_on_sale": true,
         "has_ended": false,
-        "is_upcoming": true,
-        "remain": "",
+        "is_upcoming": false,
+        "remain": "03:56:19",
+        "slot_label": "20:00-24:00",
+        "start_at": 1789905600,
+        "end_at": 1789920000
+      },
+      {
+        "name": "普通粉尘",
+        "price": "500",
+        "limit": "限购100",
+        "category": "炼金材料",
+        "desc": "常见的炼金材料，蕴含少量普通系魔法，是合成技能石的主要触媒。",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/f/f6/ls7hsygs9epizddf1xo4q9b2iu1dduu.png/100px-100127.png",
+        "is_on_sale": true,
+        "has_ended": false,
+        "is_upcoming": false,
+        "remain": "03:56:19",
         "slot_label": "20:00-24:00",
         "start_at": 1789905600,
         "end_at": 1789920000
@@ -136,10 +151,25 @@
         "slot_label": "12:00-16:00",
         "start_at": 1789876800,
         "end_at": 1789891200
+      },
+      {
+        "name": "炫彩蛋",
+        "price": "160w",
+        "limit": "限购1",
+        "category": "精灵蛋",
+        "desc": "蕴含着难以捉摸的魔力，必定孵化出“炫彩”外观、“了不起”天分的精灵。",
+        "image_url": "//img.71acg.net/whd~hykb/comm/hd_admin_upload_2982_d3f07a7c316e2b71dc3e5fc1871bd6da.png",
+        "is_on_sale": false,
+        "has_ended": true,
+        "is_upcoming": false,
+        "remain": "",
+        "slot_label": "16:00-20:00",
+        "start_at": 1789891200,
+        "end_at": 1789905600
       }
     ],
-    "on_sale_count": 1,
-    "total_count": 8,
-    "updated_at": "2026-09-20 19:53:20"
+    "on_sale_count": 3,
+    "total_count": 10,
+    "updated_at": "2026-09-20 20:03:40"
   }
 }
