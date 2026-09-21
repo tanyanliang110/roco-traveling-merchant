@@ -5,20 +5,21 @@ import (
 	"sort"
 )
 
-// importantProductNames is the single source of truth for products that need
-// extra attention while they are on sale. Its order is also their priority.
-var importantProductNames = []string{
-	"炫彩精灵蛋",
-	"奇异血脉秘药",
-	"首领血脉秘药",
-	"棱镜球",
+// importantProductRanks is the single source of truth for products that need
+// extra attention while they are on sale. Names that share a rank are exact
+// aliases for the same product.
+var importantProductRanks = map[string]int{
+	"炫彩蛋":    0,
+	"炫彩精灵蛋":  0,
+	"奇异血脉秘药": 1,
+	"首领血脉秘药": 2,
+	"棱镜球":    3,
+	"祝福项坠":   4,
 }
 
 func importantProductRank(name string) int {
-	for rank, importantName := range importantProductNames {
-		if name == importantName {
-			return rank
-		}
+	if rank, ok := importantProductRanks[name]; ok {
+		return rank
 	}
 	return -1
 }

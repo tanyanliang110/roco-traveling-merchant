@@ -59,6 +59,50 @@ func TestSortProductsPrioritizesOnlyOnSaleImportantProductsAndEndsLast(t *testin
 	}
 }
 
+func TestImportantProductAliasesHaveSameExactRankAndPriorityOrder(t *testing.T) {
+	for _, test := range []struct {
+		name string
+		want int
+	}{
+		{name: "炫彩蛋", want: 0},
+		{name: "炫彩精灵蛋", want: 0},
+		{name: "奇异血脉秘药", want: 1},
+		{name: "首领血脉秘药", want: 2},
+		{name: "棱镜球", want: 3},
+		{name: "祝福项坠", want: 4},
+		{name: "炫彩蛋礼盒", want: -1},
+	} {
+		if got := importantProductRank(test.name); got != test.want {
+			t.Errorf("importantProductRank(%q) = %d, want %d", test.name, got, test.want)
+		}
+	}
+
+	products := []Product{
+		{Name: "普通在售商品", IsOnSale: true},
+		{Name: "祝福项坠", IsOnSale: true},
+		{Name: "棱镜球", IsOnSale: true},
+		{Name: "首领血脉秘药", IsOnSale: true},
+		{Name: "奇异血脉秘药", IsOnSale: true},
+		{Name: "炫彩精灵蛋", IsOnSale: true},
+		{Name: "炫彩蛋", IsOnSale: true},
+		{Name: "炫彩蛋", IsUpcoming: true},
+	}
+	sortProducts(products, nil)
+	want := []string{
+		"炫彩精灵蛋",
+		"炫彩蛋",
+		"奇异血脉秘药",
+		"首领血脉秘药",
+		"棱镜球",
+		"祝福项坠",
+		"普通在售商品",
+		"炫彩蛋",
+	}
+	if got := productNames(products); !reflect.DeepEqual(got, want) {
+		t.Fatalf("sorted names = %v, want %v", got, want)
+	}
+}
+
 func TestProductsAPIResponseSortsACopyWithoutChangingNamesOrInput(t *testing.T) {
 	result := priorityTestResult()
 	original := append([]Product(nil), result.Products...)
@@ -107,15 +151,46 @@ func TestRenderedPageKeepsSaleOrderAfterSnapshotRefreshAndMarksOnlySalePriority(
 			t.Fatalf("page lacks client-side ordering behavior %q", want)
 		}
 	}
-	const prioritySource = `var priorityProductNames=["炫彩精灵蛋","奇异血脉秘药","首领血脉秘药","棱镜球"];`
+	const prioritySource = "var priorityProductRanks={"
 	if strings.Count(body, prioritySource) != 1 {
-		t.Fatalf("page must inject the Go priority list once, count = %d", strings.Count(body, prioritySource))
+		t.Fatalf("page must inject the Go priority rank mapping once, count = %d", strings.Count(body, prioritySource))
 	}
 	if !strings.Contains(body, "sortSnapshotProducts(snapshot.products,snapshot.time_slots).forEach") {
 		t.Fatal("renderSnapshot does not consume the sorted snapshot")
 	}
 	if !strings.Contains(body, "document.querySelectorAll('[data-start-at][data-end-at]').forEach(function(card){updateCard(card,now)});\n  sortProductCards();") {
 		t.Fatal("countdown refresh does not reorder cards after status transitions")
+	}
+}
+
+func TestRenderedPageMarksRealAliasAndBlessingPendantOnlyWhenOnSale(t *testing.T) {
+	result := CrawlResult{Products: []Product{
+		{Name: "炫彩蛋", IsOnSale: true},
+		{Name: "祝福项坠", IsOnSale: true},
+		{Name: "炫彩蛋", IsUpcoming: true},
+	}}
+	var out bytes.Buffer
+	if err := RenderPage(&out, result); err != nil {
+		t.Fatal(err)
+	}
+	body := out.String()
+
+	if strings.Count(body, "❗ 炫彩蛋") != 1 {
+		t.Fatalf("on-sale alias marker count = %d, want 1", strings.Count(body, "❗ 炫彩蛋"))
+	}
+	if strings.Count(body, "❗ 祝福项坠") != 1 {
+		t.Fatalf("on-sale blessing pendant marker count = %d, want 1", strings.Count(body, "❗ 祝福项坠"))
+	}
+	for _, want := range []string{
+		"var priorityProductRanks={",
+		`"炫彩蛋":0`,
+		`"炫彩精灵蛋":0`,
+		`"祝福项坠":4`,
+		"function priorityProductRank(name){var rank=priorityProductRanks[stringValue(name)];return rank===undefined?-1:rank}",
+	} {
+		if !strings.Contains(body, want) {
+			t.Fatalf("page lacks exact client-side priority behavior %q", want)
+		}
 	}
 }
 
@@ -180,6 +255,45 @@ func TestNotificationTitleMarksOnlySalePriority(t *testing.T) {
 	}
 	if got := notificationTitle(withoutSalePriority); got != "🏪 远行商人更新 · 1 件在售" {
 		t.Fatalf("ordinary title = %q", got)
+	}
+}
+
+func TestPriorityAliasesMarkNotificationTitleAndBodyWithoutChangingNameOrKey(t *testing.T) {
+	now := beijingDate(2026, time.September, 15, 13, 23, 12)
+	products := []Product{
+		{Name: "普通在售商品", IsOnSale: true, SlotLabel: "12:00-16:00"},
+		{Name: "祝福项坠", IsOnSale: true, SlotLabel: "12:00-16:00"},
+		{Name: "炫彩蛋", IsOnSale: true, SlotLabel: "12:00-16:00"},
+		{Name: "炫彩蛋", IsUpcoming: true, SlotLabel: "16:00-20:00"},
+	}
+	onSale := prepareNotificationProducts(products, nil)
+	message := buildOncePushMessage(onSale, "12:00-16:00")
+	if onSale[0].Name != "炫彩蛋" {
+		t.Fatalf("on-sale product name = %q, want original name", onSale[0].Name)
+	}
+	response := productsAPIResponse(CrawlResult{Products: []Product{products[2]}})
+	data := response.Data.(CrawlResult)
+	if data.Products[0].Name != "炫彩蛋" {
+		t.Fatalf("API product name = %q, want original name", data.Products[0].Name)
+	}
+
+	aliasAt := strings.Index(message, "❗ **炫彩蛋**")
+	pendantAt := strings.Index(message, "❗ **祝福项坠**")
+	regularAt := strings.Index(message, "**普通在售商品**")
+	if aliasAt < 0 || pendantAt < 0 || regularAt < 0 || !(aliasAt < pendantAt && pendantAt < regularAt) {
+		t.Fatalf("notification order or markers are wrong:\n%s", message)
+	}
+	if strings.Contains(message, "❗ **炫彩蛋**") && strings.Count(message, "**炫彩蛋**") != 1 {
+		t.Fatalf("non-sale alias entered or was marked:\n%s", message)
+	}
+	if got := notificationTitle(products); got != "❗ 🏪 远行商人更新 · 3 件在售" {
+		t.Fatalf("notification title = %q", got)
+	}
+	if products[2].Name != "炫彩蛋" {
+		t.Fatalf("product name = %q, want original name", products[2].Name)
+	}
+	if got := NotificationKey(products[2], now); got != "2026-09-15 | 12:00-16:00 | 炫彩蛋" {
+		t.Fatalf("notification key = %q", got)
 	}
 }
 

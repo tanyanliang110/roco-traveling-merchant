@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/json"
 	"html/template"
 	"io"
 )
@@ -11,7 +12,7 @@ type pageData struct {
 	OnSaleCount           int
 	TotalCount            int
 	UpdatedAt             string
-	ImportantProductNames []string
+	ImportantProductRanks template.JS
 }
 
 type pageProduct struct {
@@ -39,7 +40,7 @@ func RenderPage(w io.Writer, result CrawlResult) error {
 		OnSaleCount:           result.OnSaleCount,
 		TotalCount:            result.TotalCount,
 		UpdatedAt:             result.UpdatedAt,
-		ImportantProductNames: append([]string(nil), importantProductNames...),
+		ImportantProductRanks: clientPriorityProductRanks(),
 	}
 	for _, product := range products {
 		pageProduct := newPageProduct(product)
@@ -47,6 +48,14 @@ func RenderPage(w io.Writer, result CrawlResult) error {
 		view.Products = append(view.Products, pageProduct)
 	}
 	return merchantPageTemplate.Execute(w, view)
+}
+
+func clientPriorityProductRanks() template.JS {
+	encoded, err := json.Marshal(importantProductRanks)
+	if err != nil {
+		panic(err)
+	}
+	return template.JS(encoded)
 }
 
 func newPageProduct(product Product) pageProduct {
@@ -106,8 +115,8 @@ h1{color:#333;margin-bottom:12px}
 </div>{{end}}</div>
 <script>
 (function(){
-var priorityProductNames={{.ImportantProductNames}};
-function priorityProductRank(name){return priorityProductNames.indexOf(stringValue(name))}
+var priorityProductRanks={{.ImportantProductRanks}};
+function priorityProductRank(name){var rank=priorityProductRanks[stringValue(name)];return rank===undefined?-1:rank}
 function pad(n){return n<10?'0'+n:''+n}
 function duration(seconds){
   return pad(Math.floor(seconds/3600))+':'+pad(Math.floor((seconds%3600)/60))+':'+pad(seconds%60);
