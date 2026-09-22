@@ -18,6 +18,36 @@
     ],
     "products": [
       {
+        "name": "炫彩蛋",
+        "price": "160w",
+        "limit": "限购1",
+        "category": "精灵蛋",
+        "desc": "蕴含着难以捉摸的魔力，必定孵化出“炫彩”外观、“了不起”天分的精灵。",
+        "image_url": "//img.71acg.net/whd~hykb/comm/hd_admin_upload_2982_d3f07a7c316e2b71dc3e5fc1871bd6da.png",
+        "is_on_sale": true,
+        "has_ended": false,
+        "is_upcoming": false,
+        "remain": "03:56:25",
+        "slot_label": "16:00-20:00",
+        "start_at": 1790064000,
+        "end_at": 1790078400
+      },
+      {
+        "name": "蓝晶碧玺",
+        "price": "1000",
+        "limit": "限购100",
+        "category": "炼金材料",
+        "desc": "比较常用的炼金材料，可以用来合成咕噜球和技能石。 某些晶石蜗会产出珍贵的粉蓝色碧玺，为此商人翻着花样研究晶石蜗的食谱喜好。",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/c/c5/k8wzdzechd88qs9bxuvcnyg0pv4tzl4.png/100px-100681.png",
+        "is_on_sale": true,
+        "has_ended": false,
+        "is_upcoming": false,
+        "remain": "03:56:25",
+        "slot_label": "16:00-20:00",
+        "start_at": 1790064000,
+        "end_at": 1790078400
+      },
+      {
         "name": "魔力果",
         "price": "6000",
         "limit": "限购20",
@@ -27,10 +57,10 @@
         "is_on_sale": true,
         "has_ended": false,
         "is_upcoming": false,
-        "remain": "00:06:44",
-        "slot_label": "12:00-16:00",
-        "start_at": 1790049600,
-        "end_at": 1790064000
+        "remain": "03:56:25",
+        "slot_label": "16:00-20:00",
+        "start_at": 1790064000,
+        "end_at": 1790078400
       },
       {
         "name": "紫莲刚玉",
@@ -46,10 +76,25 @@
         "slot_label": "08:00-12:00",
         "start_at": 1790035200,
         "end_at": 1790049600
+      },
+      {
+        "name": "魔力果",
+        "price": "6000",
+        "limit": "限购20",
+        "category": "精灵喂养材料",
+        "desc": "不太常见的果实，精灵食用后获得能力提升。 “精灵食物营养科的研究总是不见进展，这么多年了精灵还在吃果子。”",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/c/c6/5qe6rcdtfxe1gsrvgj3lrn033athx9p.png/100px-100668.png",
+        "is_on_sale": false,
+        "has_ended": true,
+        "is_upcoming": false,
+        "remain": "",
+        "slot_label": "12:00-16:00",
+        "start_at": 1790049600,
+        "end_at": 1790064000
       }
     ],
-    "on_sale_count": 1,
-    "total_count": 2,
-    "updated_at": "2026-09-22 15:53:15"
+    "on_sale_count": 3,
+    "total_count": 5,
+    "updated_at": "2026-09-22 16:03:34"
   }
 }
