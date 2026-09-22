@@ -2,39 +2,8 @@
   "code": 200,
   "message": "success",
   "data": {
-    "on_sale_count": 2,
-    "products": [
-      {
-        "name": "黄石榴石",
-        "price": "1000",
-        "limit": "限购100",
-        "category": "炼金材料",
-        "desc": "比较常用的炼金材料，可以用来合成咕噜球和技能石。 特殊的晶体排列解构，精灵打喷嚏可能会令这种晶体发生爆炸。",
-        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/f/f3/c5x5f0lgk33ly801m8w1n9aod8ny4sh.png/100px-100683.png",
-        "is_on_sale": true,
-        "has_ended": false,
-        "is_upcoming": false,
-        "remain": "00:06:41",
-        "slot_label": "20:00-24:00",
-        "start_at": 1790078400,
-        "end_at": 1790092800
-      },
-      {
-        "name": "黑晶琉璃",
-        "price": "1000",
-        "limit": "限购100",
-        "category": "炼金材料",
-        "desc": "比较常用的炼金材料，可以用来合成咕噜球和技能石。 “我的阿米亚特说这玩意儿太香了，嚼起来有些呛口，像火山灰，有纯正的拉布朗矿山味道。”",
-        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/b/bc/khe20j8lwkt1bg9g4b0gbnsff48g93c.png/100px-100628.png",
-        "is_on_sale": true,
-        "has_ended": false,
-        "is_upcoming": false,
-        "remain": "00:06:41",
-        "slot_label": "20:00-24:00",
-        "start_at": 1790078400,
-        "end_at": 1790092800
-      }
-    ],
+    "on_sale_count": 0,
+    "products": [],
     "time_slots": [
       {
         "label": "08:00-12:00"
@@ -49,6 +18,6 @@
         "label": "20:00-24:00"
       }
     ],
-    "updated_at": "2026-09-22 23:53:18"
+    "updated_at": "2026-09-23 01:45:39"
   }
 }
