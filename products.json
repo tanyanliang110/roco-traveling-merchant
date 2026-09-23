@@ -18,23 +18,53 @@
     ],
     "products": [
       {
+        "name": "魔力果",
+        "price": "6000",
+        "limit": "限购20",
+        "category": "精灵喂养材料",
+        "desc": "不太常见的果实，精灵食用后获得能力提升。 “精灵食物营养科的研究总是不见进展，这么多年了精灵还在吃果子。”",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/c/c6/5qe6rcdtfxe1gsrvgj3lrn033athx9p.png/100px-100668.png",
+        "is_on_sale": true,
+        "has_ended": false,
+        "is_upcoming": false,
+        "remain": "03:56:49",
+        "slot_label": "12:00-16:00",
+        "start_at": 1790136000,
+        "end_at": 1790150400
+      },
+      {
+        "name": "龙系血脉秘药",
+        "price": "16w",
+        "limit": "限购3",
+        "category": "血脉修改道具",
+        "desc": "能唤醒血脉力量的远古秘药，使精灵获得龙系血脉。 “一段失落的秘密将被重拾。”",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/c/c5/88wm27imouqbkxv6d9tlof24xs20nrv.png/100px-Xuemai_long.png",
+        "is_on_sale": true,
+        "has_ended": false,
+        "is_upcoming": false,
+        "remain": "03:56:49",
+        "slot_label": "12:00-16:00",
+        "start_at": 1790136000,
+        "end_at": 1790150400
+      },
+      {
         "name": "黄石榴石",
         "price": "1000",
         "limit": "限购100",
         "category": "炼金材料",
         "desc": "比较常用的炼金材料，可以用来合成咕噜球和技能石。 特殊的晶体排列解构，精灵打喷嚏可能会令这种晶体发生爆炸。",
         "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/f/f3/c5x5f0lgk33ly801m8w1n9aod8ny4sh.png/100px-100683.png",
-        "is_on_sale": true,
-        "has_ended": false,
+        "is_on_sale": false,
+        "has_ended": true,
         "is_upcoming": false,
-        "remain": "00:06:44",
+        "remain": "",
         "slot_label": "08:00-12:00",
         "start_at": 1790121600,
         "end_at": 1790136000
       }
     ],
-    "on_sale_count": 1,
-    "total_count": 1,
-    "updated_at": "2026-09-23 11:53:15"
+    "on_sale_count": 2,
+    "total_count": 3,
+    "updated_at": "2026-09-23 12:03:10"
   }
 }
