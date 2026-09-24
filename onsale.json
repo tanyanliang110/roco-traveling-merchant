@@ -5,34 +5,34 @@
     "on_sale_count": 3,
     "products": [
       {
-        "name": "普通粉尘",
+        "name": "武系粉尘",
         "price": "500",
         "limit": "限购100",
         "category": "炼金材料",
-        "desc": "常见的炼金材料，蕴含少量普通系魔法，是合成技能石的主要触媒。",
-        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/f/f6/ls7hsygs9epizddf1xo4q9b2iu1dduu.png/100px-100127.png",
+        "desc": "常见的炼金材料，蕴含少量武系魔法，是合成技能石的主要触媒。",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/2/23/su3uy9wfjwvx3ifjaia3l88j2kjr5mg.png/100px-100135.png",
         "is_on_sale": true,
         "has_ended": false,
         "is_upcoming": false,
-        "remain": "00:06:43",
-        "slot_label": "12:00-16:00",
-        "start_at": 1790222400,
-        "end_at": 1790236800
+        "remain": "03:56:11",
+        "slot_label": "16:00-20:00",
+        "start_at": 1790236800,
+        "end_at": 1790251200
       },
       {
-        "name": "神奇的蛋",
-        "price": "36000",
-        "limit": "限购5",
-        "category": "精灵蛋",
-        "desc": "蕴含着难以捉摸的魔力，不知道可以孵化出哪种精灵。",
-        "image_url": "//img.71acg.net/whd~hykb/comm/hd_admin_upload_2982_5390e1a946446e64d929ad89a3ad3eed.png",
+        "name": "紫莲刚玉",
+        "price": "1000",
+        "limit": "限购100",
+        "category": "炼金材料",
+        "desc": "比较常用的炼金材料，可以用来合成咕噜球和技能石。 紫雀花王朝的贵族相信这是复活与不朽的象征，常常将紫莲刚玉制作成护身符随身携带。",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/9/9c/s7ej54xr4magmv0h0zag15jah6avwlc.png/100px-100682.png",
         "is_on_sale": true,
         "has_ended": false,
         "is_upcoming": false,
-        "remain": "00:06:43",
-        "slot_label": "12:00-16:00",
-        "start_at": 1790222400,
-        "end_at": 1790236800
+        "remain": "03:56:11",
+        "slot_label": "16:00-20:00",
+        "start_at": 1790236800,
+        "end_at": 1790251200
       },
       {
         "name": "蓝晶碧玺",
@@ -44,10 +44,10 @@
         "is_on_sale": true,
         "has_ended": false,
         "is_upcoming": false,
-        "remain": "00:06:43",
-        "slot_label": "12:00-16:00",
-        "start_at": 1790222400,
-        "end_at": 1790236800
+        "remain": "03:56:11",
+        "slot_label": "16:00-20:00",
+        "start_at": 1790236800,
+        "end_at": 1790251200
       }
     ],
     "time_slots": [
@@ -64,6 +64,6 @@
         "label": "20:00-24:00"
       }
     ],
-    "updated_at": "2026-09-24 15:53:16"
+    "updated_at": "2026-09-24 16:03:48"
   }
 }
