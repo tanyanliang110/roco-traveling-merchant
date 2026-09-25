@@ -5,19 +5,34 @@
     "on_sale_count": 3,
     "products": [
       {
-        "name": "国王球",
-        "price": "16w",
-        "limit": "限购3",
-        "category": "咕噜球",
-        "desc": "昂贵且好用的咕噜球，能十分轻易地捕捉精灵，并能提升精灵的天分。 曾经专供贵族使用，制作方法不明。",
-        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/2/2e/jygbfxpdbup5weqy4zaqnyaw2fcfyrq.png/100px-100255.png",
+        "name": "冰系粉尘",
+        "price": "500",
+        "limit": "限购100",
+        "category": "炼金材料",
+        "desc": "常见的炼金材料，蕴含少量冰系魔法，是合成技能石的主要触媒。",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/a/a9/no0rhm0wky3e406wni3ef13z6zvfxw1.png/100px-100130.png",
         "is_on_sale": true,
         "has_ended": false,
         "is_upcoming": false,
-        "remain": "00:06:45",
-        "slot_label": "12:00-16:00",
-        "start_at": 1790308800,
-        "end_at": 1790323200
+        "remain": "03:56:11",
+        "slot_label": "16:00-20:00",
+        "start_at": 1790323200,
+        "end_at": 1790337600
+      },
+      {
+        "name": "神奇的蛋",
+        "price": "36000",
+        "limit": "限购5",
+        "category": "精灵蛋",
+        "desc": "蕴含着难以捉摸的魔力，不知道可以孵化出哪种精灵。",
+        "image_url": "//img.71acg.net/whd~hykb/comm/hd_admin_upload_2982_5390e1a946446e64d929ad89a3ad3eed.png",
+        "is_on_sale": true,
+        "has_ended": false,
+        "is_upcoming": false,
+        "remain": "03:56:11",
+        "slot_label": "16:00-20:00",
+        "start_at": 1790323200,
+        "end_at": 1790337600
       },
       {
         "name": "紫莲刚玉",
@@ -29,25 +44,10 @@
         "is_on_sale": true,
         "has_ended": false,
         "is_upcoming": false,
-        "remain": "00:06:45",
-        "slot_label": "12:00-16:00",
-        "start_at": 1790308800,
-        "end_at": 1790323200
-      },
-      {
-        "name": "翼系粉尘",
-        "price": "500",
-        "limit": "限购100",
-        "category": "炼金材料",
-        "desc": "常见的炼金材料，蕴含少量翼系魔法，是合成技能石的主要触媒。",
-        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/3/35/5mp1ohcm72pgsxax5kq3x1aophw3lh0.png/100px-100136.png",
-        "is_on_sale": true,
-        "has_ended": false,
-        "is_upcoming": false,
-        "remain": "00:06:45",
-        "slot_label": "12:00-16:00",
-        "start_at": 1790308800,
-        "end_at": 1790323200
+        "remain": "03:56:11",
+        "slot_label": "16:00-20:00",
+        "start_at": 1790323200,
+        "end_at": 1790337600
       }
     ],
     "time_slots": [
@@ -64,6 +64,6 @@
         "label": "20:00-24:00"
       }
     ],
-    "updated_at": "2026-09-25 15:53:14"
+    "updated_at": "2026-09-25 16:03:48"
   }
 }
