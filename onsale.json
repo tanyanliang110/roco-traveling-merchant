@@ -14,7 +14,7 @@
         "is_on_sale": true,
         "has_ended": false,
         "is_upcoming": false,
-        "remain": "02:36:34",
+        "remain": "02:26:50",
         "slot_label": "16:00-20:00",
         "start_at": 1790323200,
         "end_at": 1790337600
@@ -29,7 +29,7 @@
         "is_on_sale": true,
         "has_ended": false,
         "is_upcoming": false,
-        "remain": "02:36:34",
+        "remain": "02:26:50",
         "slot_label": "16:00-20:00",
         "start_at": 1790323200,
         "end_at": 1790337600
@@ -44,7 +44,7 @@
         "is_on_sale": true,
         "has_ended": false,
         "is_upcoming": false,
-        "remain": "02:36:34",
+        "remain": "02:26:50",
         "slot_label": "16:00-20:00",
         "start_at": 1790323200,
         "end_at": 1790337600
@@ -64,6 +64,6 @@
         "label": "20:00-24:00"
       }
     ],
-    "updated_at": "2026-09-25 17:23:25"
+    "updated_at": "2026-09-25 17:33:09"
   }
 }
