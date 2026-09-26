@@ -18,49 +18,19 @@
     ],
     "products": [
       {
-        "name": "国王球",
-        "price": "16w",
-        "limit": "限购3",
-        "category": "咕噜球",
-        "desc": "昂贵且好用的咕噜球，能十分轻易地捕捉精灵，并能提升精灵的天分。 曾经专供贵族使用，制作方法不明。",
-        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/2/2e/jygbfxpdbup5weqy4zaqnyaw2fcfyrq.png/100px-100255.png",
-        "is_on_sale": true,
-        "has_ended": false,
-        "is_upcoming": false,
-        "remain": "00:06:59",
-        "slot_label": "12:00-16:00",
-        "start_at": 1790395200,
-        "end_at": 1790409600
-      },
-      {
-        "name": "紫莲刚玉",
-        "price": "1000",
+        "name": "翼系粉尘",
+        "price": "500",
         "limit": "限购100",
         "category": "炼金材料",
-        "desc": "比较常用的炼金材料，可以用来合成咕噜球和技能石。 紫雀花王朝的贵族相信这是复活与不朽的象征，常常将紫莲刚玉制作成护身符随身携带。",
-        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/9/9c/s7ej54xr4magmv0h0zag15jah6avwlc.png/100px-100682.png",
+        "desc": "常见的炼金材料，蕴含少量翼系魔法，是合成技能石的主要触媒。",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/3/35/5mp1ohcm72pgsxax5kq3x1aophw3lh0.png/100px-100136.png",
         "is_on_sale": true,
         "has_ended": false,
         "is_upcoming": false,
-        "remain": "00:06:59",
-        "slot_label": "12:00-16:00",
-        "start_at": 1790395200,
-        "end_at": 1790409600
-      },
-      {
-        "name": "黑晶琉璃",
-        "price": "1000",
-        "limit": "限购100",
-        "category": "炼金材料",
-        "desc": "比较常用的炼金材料，可以用来合成咕噜球和技能石。 “我的阿米亚特说这玩意儿太香了，嚼起来有些呛口，像火山灰，有纯正的拉布朗矿山味道。”",
-        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/b/bc/khe20j8lwkt1bg9g4b0gbnsff48g93c.png/100px-100628.png",
-        "is_on_sale": true,
-        "has_ended": false,
-        "is_upcoming": false,
-        "remain": "00:06:59",
-        "slot_label": "12:00-16:00",
-        "start_at": 1790395200,
-        "end_at": 1790409600
+        "remain": "03:56:31",
+        "slot_label": "16:00-20:00",
+        "start_at": 1790409600,
+        "end_at": 1790424000
       },
       {
         "name": "网兜球",
@@ -91,10 +61,55 @@
         "slot_label": "08:00-12:00",
         "start_at": 1790380800,
         "end_at": 1790395200
+      },
+      {
+        "name": "国王球",
+        "price": "16w",
+        "limit": "限购3",
+        "category": "咕噜球",
+        "desc": "昂贵且好用的咕噜球，能十分轻易地捕捉精灵，并能提升精灵的天分。 曾经专供贵族使用，制作方法不明。",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/2/2e/jygbfxpdbup5weqy4zaqnyaw2fcfyrq.png/100px-100255.png",
+        "is_on_sale": false,
+        "has_ended": true,
+        "is_upcoming": false,
+        "remain": "",
+        "slot_label": "12:00-16:00",
+        "start_at": 1790395200,
+        "end_at": 1790409600
+      },
+      {
+        "name": "紫莲刚玉",
+        "price": "1000",
+        "limit": "限购100",
+        "category": "炼金材料",
+        "desc": "比较常用的炼金材料，可以用来合成咕噜球和技能石。 紫雀花王朝的贵族相信这是复活与不朽的象征，常常将紫莲刚玉制作成护身符随身携带。",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/9/9c/s7ej54xr4magmv0h0zag15jah6avwlc.png/100px-100682.png",
+        "is_on_sale": false,
+        "has_ended": true,
+        "is_upcoming": false,
+        "remain": "",
+        "slot_label": "12:00-16:00",
+        "start_at": 1790395200,
+        "end_at": 1790409600
+      },
+      {
+        "name": "黑晶琉璃",
+        "price": "1000",
+        "limit": "限购100",
+        "category": "炼金材料",
+        "desc": "比较常用的炼金材料，可以用来合成咕噜球和技能石。 “我的阿米亚特说这玩意儿太香了，嚼起来有些呛口，像火山灰，有纯正的拉布朗矿山味道。”",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/b/bc/khe20j8lwkt1bg9g4b0gbnsff48g93c.png/100px-100628.png",
+        "is_on_sale": false,
+        "has_ended": true,
+        "is_upcoming": false,
+        "remain": "",
+        "slot_label": "12:00-16:00",
+        "start_at": 1790395200,
+        "end_at": 1790409600
       }
     ],
-    "on_sale_count": 3,
-    "total_count": 5,
-    "updated_at": "2026-09-26 15:53:00"
+    "on_sale_count": 1,
+    "total_count": 6,
+    "updated_at": "2026-09-26 16:03:28"
   }
 }
