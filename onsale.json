@@ -2,8 +2,39 @@
   "code": 200,
   "message": "success",
   "data": {
-    "on_sale_count": 0,
-    "products": [],
+    "on_sale_count": 2,
+    "products": [
+      {
+        "name": "恶系粉尘",
+        "price": "500",
+        "limit": "限购100",
+        "category": "炼金材料",
+        "desc": "常见的炼金材料，蕴含少量恶系魔法，是合成技能石的主要触媒。",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/e/ec/mbugzr13ol6m9ay5focjw9kctt14g5h.png/100px-100125.png",
+        "is_on_sale": true,
+        "has_ended": false,
+        "is_upcoming": false,
+        "remain": "03:57:04",
+        "slot_label": "08:00-12:00",
+        "start_at": 1790640000,
+        "end_at": 1790654400
+      },
+      {
+        "name": "萌系粉尘",
+        "price": "500",
+        "limit": "限购100",
+        "category": "炼金材料",
+        "desc": "常见的炼金材料，蕴含少量萌系魔法，是合成技能石的主要触媒。",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/2/26/58llleh28pa33kxom2cub80nnf0y9zd.png/100px-100137.png",
+        "is_on_sale": true,
+        "has_ended": false,
+        "is_upcoming": false,
+        "remain": "03:57:04",
+        "slot_label": "08:00-12:00",
+        "start_at": 1790640000,
+        "end_at": 1790654400
+      }
+    ],
     "time_slots": [
       {
         "label": "08:00-12:00"
@@ -18,6 +49,6 @@
         "label": "20:00-24:00"
       }
     ],
-    "updated_at": "2026-09-29 02:09:43"
+    "updated_at": "2026-09-29 08:02:55"
   }
 }
