@@ -27,7 +27,7 @@
         "is_on_sale": true,
         "has_ended": false,
         "is_upcoming": false,
-        "remain": "03:46:47",
+        "remain": "03:36:47",
         "slot_label": "08:00-12:00",
         "start_at": 1790812800,
         "end_at": 1790827200
@@ -42,7 +42,7 @@
         "is_on_sale": true,
         "has_ended": false,
         "is_upcoming": false,
-        "remain": "03:46:47",
+        "remain": "03:36:47",
         "slot_label": "08:00-12:00",
         "start_at": 1790812800,
         "end_at": 1790827200
@@ -50,7 +50,7 @@
       {
         "name": "可可果球",
         "price": "50",
-        "limit": "限购20",
+        "limit": "限购30",
         "category": "特制咕噜球",
         "desc": "天然的咕噜球，暂未研究出其炼制配方。 为庆祝可可果节而设计的咕噜球，闻起来有可可果的香甜气息。",
         "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/d/d2/t2rpfj5xsrcxxwnwkrh43f3nczmt59f.png/100px-100825.png",
@@ -95,6 +95,6 @@
     ],
     "on_sale_count": 2,
     "total_count": 5,
-    "updated_at": "2026-10-01 08:13:12"
+    "updated_at": "2026-10-01 08:23:12"
   }
 }
