@@ -18,6 +18,21 @@
     ],
     "products": [
       {
+        "name": "首领血脉秘药",
+        "price": "32w",
+        "limit": "限购1",
+        "category": "血脉修改道具",
+        "desc": "修改血脉的秘药，使特定精灵获得“首领血脉”。",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/2/26/fbfwlhncfo0pstpv3ibxn1mj3ayg6di.png/100px-Xuemai_shoulingxuemai.png",
+        "is_on_sale": true,
+        "has_ended": false,
+        "is_upcoming": false,
+        "remain": "03:56:57",
+        "slot_label": "20:00-24:00",
+        "start_at": 1791201600,
+        "end_at": 1791216000
+      },
+      {
         "name": "神奇的蛋",
         "price": "36000",
         "limit": "限购5",
@@ -27,10 +42,10 @@
         "is_on_sale": true,
         "has_ended": false,
         "is_upcoming": false,
-        "remain": "00:06:57",
-        "slot_label": "16:00-20:00",
-        "start_at": 1791187200,
-        "end_at": 1791201600
+        "remain": "03:56:57",
+        "slot_label": "20:00-24:00",
+        "start_at": 1791201600,
+        "end_at": 1791216000
       },
       {
         "name": "美妙球",
@@ -39,10 +54,25 @@
         "category": "特制咕噜球",
         "desc": "更适合用来捕捉萌系、普通系的精灵。 活泼的球，开心的精灵会被吸引。",
         "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/b/b0/6ywvdkywqprqvws7m4ogeldp9y19swt.png/100px-Img_haihaiqiu.png",
-        "is_on_sale": false,
+        "is_on_sale": true,
         "has_ended": false,
-        "is_upcoming": true,
-        "remain": "",
+        "is_upcoming": false,
+        "remain": "03:56:57",
+        "slot_label": "20:00-24:00",
+        "start_at": 1791201600,
+        "end_at": 1791216000
+      },
+      {
+        "name": "魔力果",
+        "price": "6000",
+        "limit": "限购20",
+        "category": "精灵喂养材料",
+        "desc": "不太常见的果实，精灵食用后获得能力提升。 “精灵食物营养科的研究总是不见进展，这么多年了精灵还在吃果子。”",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/c/c6/5qe6rcdtfxe1gsrvgj3lrn033athx9p.png/100px-100668.png",
+        "is_on_sale": true,
+        "has_ended": false,
+        "is_upcoming": false,
+        "remain": "03:56:57",
         "slot_label": "20:00-24:00",
         "start_at": 1791201600,
         "end_at": 1791216000
@@ -106,10 +136,25 @@
         "slot_label": "12:00-16:00",
         "start_at": 1791172800,
         "end_at": 1791187200
+      },
+      {
+        "name": "神奇的蛋",
+        "price": "36000",
+        "limit": "限购5",
+        "category": "精灵蛋",
+        "desc": "蕴含着难以捉摸的魔力，不知道可以孵化出哪种精灵。",
+        "image_url": "//img.71acg.net/whd~hykb/comm/hd_admin_upload_2982_5390e1a946446e64d929ad89a3ad3eed.png",
+        "is_on_sale": false,
+        "has_ended": true,
+        "is_upcoming": false,
+        "remain": "",
+        "slot_label": "16:00-20:00",
+        "start_at": 1791187200,
+        "end_at": 1791201600
       }
     ],
-    "on_sale_count": 1,
-    "total_count": 6,
-    "updated_at": "2026-10-05 19:53:02"
+    "on_sale_count": 4,
+    "total_count": 9,
+    "updated_at": "2026-10-05 20:03:02"
   }
 }
