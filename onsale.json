@@ -5,34 +5,34 @@
     "on_sale_count": 3,
     "products": [
       {
-        "name": "国王球",
-        "price": "16w",
-        "limit": "限购3",
-        "category": "咕噜球",
-        "desc": "昂贵且好用的咕噜球，能十分轻易地捕捉精灵，并能提升精灵的天分。 曾经专供贵族使用，制作方法不明。",
-        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/2/2e/jygbfxpdbup5weqy4zaqnyaw2fcfyrq.png/100px-100255.png",
+        "name": "可可果球",
+        "price": "50",
+        "limit": "限购30",
+        "category": "特制咕噜球",
+        "desc": "天然的咕噜球，暂未研究出其炼制配方。 为庆祝可可果节而设计的咕噜球，闻起来有可可果的香甜气息。",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/d/d2/t2rpfj5xsrcxxwnwkrh43f3nczmt59f.png/100px-100825.png",
         "is_on_sale": true,
         "has_ended": false,
         "is_upcoming": false,
-        "remain": "00:07:04",
-        "slot_label": "16:00-20:00",
-        "start_at": 1791360000,
-        "end_at": 1791374400
+        "remain": "03:56:59",
+        "slot_label": "20:00-24:00",
+        "start_at": 1791374400,
+        "end_at": 1791388800
       },
       {
-        "name": "草系血脉秘药",
-        "price": "16w",
-        "limit": "限购3",
-        "category": "血脉修改道具",
-        "desc": "能唤醒血脉力量的远古秘药，使精灵获得草系血脉。 “一段失落的秘密将被重拾。”",
-        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/e/e3/q44lm9csnpdmdswihzewb1gj6yln2v6.png/100px-Xuemai_cao.png",
+        "name": "美妙球",
+        "price": "3000",
+        "limit": "限购200",
+        "category": "特制咕噜球",
+        "desc": "更适合用来捕捉萌系、普通系的精灵。 活泼的球，开心的精灵会被吸引。",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/b/b0/6ywvdkywqprqvws7m4ogeldp9y19swt.png/100px-Img_haihaiqiu.png",
         "is_on_sale": true,
         "has_ended": false,
         "is_upcoming": false,
-        "remain": "00:07:04",
-        "slot_label": "16:00-20:00",
-        "start_at": 1791360000,
-        "end_at": 1791374400
+        "remain": "03:56:59",
+        "slot_label": "20:00-24:00",
+        "start_at": 1791374400,
+        "end_at": 1791388800
       },
       {
         "name": "魔力果",
@@ -44,10 +44,10 @@
         "is_on_sale": true,
         "has_ended": false,
         "is_upcoming": false,
-        "remain": "00:07:04",
-        "slot_label": "16:00-20:00",
-        "start_at": 1791360000,
-        "end_at": 1791374400
+        "remain": "03:56:59",
+        "slot_label": "20:00-24:00",
+        "start_at": 1791374400,
+        "end_at": 1791388800
       }
     ],
     "time_slots": [
@@ -64,6 +64,6 @@
         "label": "20:00-24:00"
       }
     ],
-    "updated_at": "2026-10-07 19:52:55"
+    "updated_at": "2026-10-07 20:03:00"
   }
 }
