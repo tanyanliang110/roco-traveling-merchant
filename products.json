@@ -27,10 +27,40 @@
         "is_on_sale": true,
         "has_ended": false,
         "is_upcoming": false,
-        "remain": "00:07:12",
-        "slot_label": "12:00-16:00",
-        "start_at": 1791345600,
-        "end_at": 1791360000
+        "remain": "03:56:44",
+        "slot_label": "16:00-20:00",
+        "start_at": 1791360000,
+        "end_at": 1791374400
+      },
+      {
+        "name": "草系血脉秘药",
+        "price": "16w",
+        "limit": "限购3",
+        "category": "血脉修改道具",
+        "desc": "能唤醒血脉力量的远古秘药，使精灵获得草系血脉。 “一段失落的秘密将被重拾。”",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/e/e3/q44lm9csnpdmdswihzewb1gj6yln2v6.png/100px-Xuemai_cao.png",
+        "is_on_sale": true,
+        "has_ended": false,
+        "is_upcoming": false,
+        "remain": "03:56:44",
+        "slot_label": "16:00-20:00",
+        "start_at": 1791360000,
+        "end_at": 1791374400
+      },
+      {
+        "name": "魔力果",
+        "price": "6000",
+        "limit": "限购20",
+        "category": "精灵喂养材料",
+        "desc": "不太常见的果实，精灵食用后获得能力提升。 “精灵食物营养科的研究总是不见进展，这么多年了精灵还在吃果子。”",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/c/c6/5qe6rcdtfxe1gsrvgj3lrn033athx9p.png/100px-100668.png",
+        "is_on_sale": true,
+        "has_ended": false,
+        "is_upcoming": false,
+        "remain": "03:56:44",
+        "slot_label": "16:00-20:00",
+        "start_at": 1791360000,
+        "end_at": 1791374400
       },
       {
         "name": "可可果球",
@@ -106,10 +136,25 @@
         "slot_label": "08:00-12:00",
         "start_at": 1791331200,
         "end_at": 1791345600
+      },
+      {
+        "name": "国王球",
+        "price": "16w",
+        "limit": "限购3",
+        "category": "咕噜球",
+        "desc": "昂贵且好用的咕噜球，能十分轻易地捕捉精灵，并能提升精灵的天分。 曾经专供贵族使用，制作方法不明。",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/2/2e/jygbfxpdbup5weqy4zaqnyaw2fcfyrq.png/100px-100255.png",
+        "is_on_sale": false,
+        "has_ended": true,
+        "is_upcoming": false,
+        "remain": "",
+        "slot_label": "12:00-16:00",
+        "start_at": 1791345600,
+        "end_at": 1791360000
       }
     ],
-    "on_sale_count": 1,
-    "total_count": 6,
-    "updated_at": "2026-10-07 15:52:47"
+    "on_sale_count": 3,
+    "total_count": 9,
+    "updated_at": "2026-10-07 16:03:15"
   }
 }
