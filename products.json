@@ -18,6 +18,21 @@
     ],
     "products": [
       {
+        "name": "奇异血脉秘药",
+        "price": "16w",
+        "limit": "限购3",
+        "category": "血脉修改道具",
+        "desc": "修改血脉的秘药，使精灵获得“奇异血脉”。",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/a/ab/eg7zj03u487p1l3f91z499w1nxdzac1.png/100px-Xuemai_qiyixuemai.png",
+        "is_on_sale": true,
+        "has_ended": false,
+        "is_upcoming": false,
+        "remain": "03:47:08",
+        "slot_label": "12:00-16:00",
+        "start_at": 1791518400,
+        "end_at": 1791532800
+      },
+      {
         "name": "暗星球",
         "price": "3000",
         "limit": "限购200",
@@ -78,8 +93,8 @@
         "end_at": 1791518400
       }
     ],
-    "on_sale_count": 0,
-    "total_count": 4,
-    "updated_at": "2026-10-09 12:02:50"
+    "on_sale_count": 1,
+    "total_count": 5,
+    "updated_at": "2026-10-09 12:12:51"
   }
 }
