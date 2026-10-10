@@ -2,22 +2,22 @@
   "code": 200,
   "message": "success",
   "data": {
-    "on_sale_count": 2,
+    "on_sale_count": 3,
     "products": [
       {
-        "name": "火系粉尘",
+        "name": "地系粉尘",
         "price": "500",
         "limit": "限购100",
         "category": "炼金材料",
-        "desc": "常见的炼金材料，蕴含少量火系魔法，是合成技能石的主要触媒。",
-        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/a/a6/a5v60zfm9ivyri166tias4efjnp5vyt.png/100px-100122.png",
+        "desc": "常见的炼金材料，蕴含少量地系魔法，是合成技能石的主要触媒。",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/7/7a/n6n70lv43avntp8zie9k18a4zw41l8i.png/100px-100129.png",
         "is_on_sale": true,
         "has_ended": false,
         "is_upcoming": false,
-        "remain": "00:07:15",
-        "slot_label": "08:00-12:00",
-        "start_at": 1791590400,
-        "end_at": 1791604800
+        "remain": "03:57:11",
+        "slot_label": "12:00-16:00",
+        "start_at": 1791604800,
+        "end_at": 1791619200
       },
       {
         "name": "神奇的蛋",
@@ -29,10 +29,25 @@
         "is_on_sale": true,
         "has_ended": false,
         "is_upcoming": false,
-        "remain": "00:07:15",
-        "slot_label": "08:00-12:00",
-        "start_at": 1791590400,
-        "end_at": 1791604800
+        "remain": "03:57:11",
+        "slot_label": "12:00-16:00",
+        "start_at": 1791604800,
+        "end_at": 1791619200
+      },
+      {
+        "name": "草系粉尘",
+        "price": "500",
+        "limit": "限购100",
+        "category": "炼金材料",
+        "desc": "常见的炼金材料，蕴含少量草系魔法，是合成技能石的主要触媒。",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/3/32/2k88qbruf464xxyf02grnmkvun59h0c.png/100px-100121.png",
+        "is_on_sale": true,
+        "has_ended": false,
+        "is_upcoming": false,
+        "remain": "03:57:11",
+        "slot_label": "12:00-16:00",
+        "start_at": 1791604800,
+        "end_at": 1791619200
       }
     ],
     "time_slots": [
@@ -49,6 +64,6 @@
         "label": "20:00-24:00"
       }
     ],
-    "updated_at": "2026-10-10 11:52:44"
+    "updated_at": "2026-10-10 12:02:48"
   }
 }
