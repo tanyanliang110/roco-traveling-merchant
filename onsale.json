@@ -5,49 +5,49 @@
     "on_sale_count": 3,
     "products": [
       {
-        "name": "地系粉尘",
-        "price": "500",
-        "limit": "限购100",
-        "category": "炼金材料",
-        "desc": "常见的炼金材料，蕴含少量地系魔法，是合成技能石的主要触媒。",
-        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/7/7a/n6n70lv43avntp8zie9k18a4zw41l8i.png/100px-100129.png",
-        "is_on_sale": true,
-        "has_ended": false,
-        "is_upcoming": false,
-        "remain": "00:07:09",
-        "slot_label": "12:00-16:00",
-        "start_at": 1791604800,
-        "end_at": 1791619200
-      },
-      {
-        "name": "神奇的蛋",
-        "price": "36000",
-        "limit": "限购5",
+        "name": "炫彩蛋",
+        "price": "160w",
+        "limit": "限购1",
         "category": "精灵蛋",
-        "desc": "蕴含着难以捉摸的魔力，不知道可以孵化出哪种精灵。",
-        "image_url": "//img.71acg.net/whd~hykb/comm/hd_admin_upload_2982_5390e1a946446e64d929ad89a3ad3eed.png",
+        "desc": "蕴含着难以捉摸的魔力，必定孵化出“炫彩”外观、“了不起”天分的精灵。",
+        "image_url": "//img.71acg.net/whd~hykb/comm/hd_admin_upload_2982_d3f07a7c316e2b71dc3e5fc1871bd6da.png",
         "is_on_sale": true,
         "has_ended": false,
         "is_upcoming": false,
-        "remain": "00:07:09",
-        "slot_label": "12:00-16:00",
-        "start_at": 1791604800,
-        "end_at": 1791619200
+        "remain": "03:57:05",
+        "slot_label": "16:00-20:00",
+        "start_at": 1791619200,
+        "end_at": 1791633600
       },
       {
-        "name": "草系粉尘",
+        "name": "地系血脉秘药",
+        "price": "16w",
+        "limit": "限购3",
+        "category": "血脉修改道具",
+        "desc": "能唤醒血脉力量的远古秘药，使精灵获得地系血脉。 “一段失落的秘密将被重拾。”",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/1/17/808i7ggttfttqexttmvtmdknqszrb7t.png/100px-Xuemai_yanshi.png",
+        "is_on_sale": true,
+        "has_ended": false,
+        "is_upcoming": false,
+        "remain": "03:57:05",
+        "slot_label": "16:00-20:00",
+        "start_at": 1791619200,
+        "end_at": 1791633600
+      },
+      {
+        "name": "幻系粉尘",
         "price": "500",
         "limit": "限购100",
         "category": "炼金材料",
-        "desc": "常见的炼金材料，蕴含少量草系魔法，是合成技能石的主要触媒。",
-        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/3/32/2k88qbruf464xxyf02grnmkvun59h0c.png/100px-100121.png",
+        "desc": "常见的炼金材料，蕴含少量幻系魔法，是合成技能石的主要触媒。",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/2/24/sgt0lc5llwfvlcmjhr1awhwq6st35fj.png/100px-100139.png",
         "is_on_sale": true,
         "has_ended": false,
         "is_upcoming": false,
-        "remain": "00:07:09",
-        "slot_label": "12:00-16:00",
-        "start_at": 1791604800,
-        "end_at": 1791619200
+        "remain": "03:57:05",
+        "slot_label": "16:00-20:00",
+        "start_at": 1791619200,
+        "end_at": 1791633600
       }
     ],
     "time_slots": [
@@ -64,6 +64,6 @@
         "label": "20:00-24:00"
       }
     ],
-    "updated_at": "2026-10-10 15:52:50"
+    "updated_at": "2026-10-10 16:02:54"
   }
 }
