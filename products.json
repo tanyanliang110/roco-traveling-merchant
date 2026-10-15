@@ -18,36 +18,6 @@
     ],
     "products": [
       {
-        "name": "国王球",
-        "price": "16w",
-        "limit": "限购3",
-        "category": "咕噜球",
-        "desc": "昂贵且好用的咕噜球，能十分轻易地捕捉精灵，并能提升精灵的天分。 曾经专供贵族使用，制作方法不明。",
-        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/2/2e/jygbfxpdbup5weqy4zaqnyaw2fcfyrq.png/100px-100255.png",
-        "is_on_sale": true,
-        "has_ended": false,
-        "is_upcoming": false,
-        "remain": "00:07:19",
-        "slot_label": "20:00-24:00",
-        "start_at": 1792065600,
-        "end_at": 1792080000
-      },
-      {
-        "name": "神奇的蛋",
-        "price": "36000",
-        "limit": "限购5",
-        "category": "精灵蛋",
-        "desc": "蕴含着难以捉摸的魔力，不知道可以孵化出哪种精灵。",
-        "image_url": "//img.71acg.net/whd~hykb/comm/hd_admin_upload_2982_5390e1a946446e64d929ad89a3ad3eed.png",
-        "is_on_sale": true,
-        "has_ended": false,
-        "is_upcoming": false,
-        "remain": "00:07:19",
-        "slot_label": "20:00-24:00",
-        "start_at": 1792065600,
-        "end_at": 1792080000
-      },
-      {
         "name": "神奇的蛋",
         "price": "36000",
         "limit": "限购5",
@@ -121,10 +91,40 @@
         "slot_label": "16:00-20:00",
         "start_at": 1792051200,
         "end_at": 1792065600
+      },
+      {
+        "name": "国王球",
+        "price": "16w",
+        "limit": "限购3",
+        "category": "咕噜球",
+        "desc": "昂贵且好用的咕噜球，能十分轻易地捕捉精灵，并能提升精灵的天分。 曾经专供贵族使用，制作方法不明。",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/2/2e/jygbfxpdbup5weqy4zaqnyaw2fcfyrq.png/100px-100255.png",
+        "is_on_sale": false,
+        "has_ended": true,
+        "is_upcoming": false,
+        "remain": "",
+        "slot_label": "20:00-24:00",
+        "start_at": 1792065600,
+        "end_at": 1792080000
+      },
+      {
+        "name": "神奇的蛋",
+        "price": "36000",
+        "limit": "限购5",
+        "category": "精灵蛋",
+        "desc": "蕴含着难以捉摸的魔力，不知道可以孵化出哪种精灵。",
+        "image_url": "//img.71acg.net/whd~hykb/comm/hd_admin_upload_2982_5390e1a946446e64d929ad89a3ad3eed.png",
+        "is_on_sale": false,
+        "has_ended": true,
+        "is_upcoming": false,
+        "remain": "",
+        "slot_label": "20:00-24:00",
+        "start_at": 1792065600,
+        "end_at": 1792080000
       }
     ],
-    "on_sale_count": 2,
+    "on_sale_count": 0,
     "total_count": 7,
-    "updated_at": "2026-10-15 23:52:40"
+    "updated_at": "2026-10-16 01:52:30"
   }
 }
