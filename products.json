@@ -18,19 +18,19 @@
     ],
     "products": [
       {
-        "name": "神奇的蛋",
-        "price": "36000",
-        "limit": "限购5",
-        "category": "精灵蛋",
-        "desc": "蕴含着难以捉摸的魔力，不知道可以孵化出哪种精灵。",
-        "image_url": "//img.71acg.net/whd~hykb/comm/hd_admin_upload_2982_5390e1a946446e64d929ad89a3ad3eed.png",
+        "name": "火系血脉秘药",
+        "price": "16w",
+        "limit": "限购3",
+        "category": "血脉修改道具",
+        "desc": "能唤醒血脉力量的远古秘药，使精灵获得火系血脉。 “一段失落的秘密将被重拾。”",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/5/58/qcen9i07u68symzdrga5qcli2wq6ws3.png/100px-Xuemai_huo.png",
         "is_on_sale": true,
         "has_ended": false,
         "is_upcoming": false,
-        "remain": "00:07:03",
-        "slot_label": "12:00-16:00",
-        "start_at": 1792209600,
-        "end_at": 1792224000
+        "remain": "03:57:04",
+        "slot_label": "16:00-20:00",
+        "start_at": 1792224000,
+        "end_at": 1792238400
       },
       {
         "name": "美妙球",
@@ -91,10 +91,25 @@
         "slot_label": "08:00-12:00",
         "start_at": 1792195200,
         "end_at": 1792209600
+      },
+      {
+        "name": "神奇的蛋",
+        "price": "36000",
+        "limit": "限购5",
+        "category": "精灵蛋",
+        "desc": "蕴含着难以捉摸的魔力，不知道可以孵化出哪种精灵。",
+        "image_url": "//img.71acg.net/whd~hykb/comm/hd_admin_upload_2982_5390e1a946446e64d929ad89a3ad3eed.png",
+        "is_on_sale": false,
+        "has_ended": true,
+        "is_upcoming": false,
+        "remain": "",
+        "slot_label": "12:00-16:00",
+        "start_at": 1792209600,
+        "end_at": 1792224000
       }
     ],
     "on_sale_count": 1,
-    "total_count": 5,
-    "updated_at": "2026-10-17 15:52:56"
+    "total_count": 6,
+    "updated_at": "2026-10-17 16:02:55"
   }
 }
