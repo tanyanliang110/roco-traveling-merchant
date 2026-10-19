@@ -18,19 +18,19 @@
     ],
     "products": [
       {
-        "name": "翼系粉尘",
+        "name": "武系粉尘",
         "price": "500",
         "limit": "限购100",
         "category": "炼金材料",
-        "desc": "常见的炼金材料，蕴含少量翼系魔法，是合成技能石的主要触媒。",
-        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/3/35/5mp1ohcm72pgsxax5kq3x1aophw3lh0.png/100px-100136.png",
+        "desc": "常见的炼金材料，蕴含少量武系魔法，是合成技能石的主要触媒。",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/2/23/su3uy9wfjwvx3ifjaia3l88j2kjr5mg.png/100px-100135.png",
         "is_on_sale": true,
         "has_ended": false,
         "is_upcoming": false,
-        "remain": "00:07:04",
-        "slot_label": "12:00-16:00",
-        "start_at": 1792382400,
-        "end_at": 1792396800
+        "remain": "03:57:11",
+        "slot_label": "16:00-20:00",
+        "start_at": 1792396800,
+        "end_at": 1792411200
       },
       {
         "name": "炫彩蛋",
@@ -46,10 +46,25 @@
         "slot_label": "08:00-12:00",
         "start_at": 1792368000,
         "end_at": 1792382400
+      },
+      {
+        "name": "翼系粉尘",
+        "price": "500",
+        "limit": "限购100",
+        "category": "炼金材料",
+        "desc": "常见的炼金材料，蕴含少量翼系魔法，是合成技能石的主要触媒。",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/3/35/5mp1ohcm72pgsxax5kq3x1aophw3lh0.png/100px-100136.png",
+        "is_on_sale": false,
+        "has_ended": true,
+        "is_upcoming": false,
+        "remain": "",
+        "slot_label": "12:00-16:00",
+        "start_at": 1792382400,
+        "end_at": 1792396800
       }
     ],
     "on_sale_count": 1,
-    "total_count": 2,
-    "updated_at": "2026-10-19 15:52:55"
+    "total_count": 3,
+    "updated_at": "2026-10-19 16:02:48"
   }
 }
