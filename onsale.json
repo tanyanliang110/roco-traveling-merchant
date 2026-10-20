@@ -2,8 +2,54 @@
   "code": 200,
   "message": "success",
   "data": {
-    "on_sale_count": 0,
-    "products": [],
+    "on_sale_count": 3,
+    "products": [
+      {
+        "name": "奇异血脉秘药",
+        "price": "16w",
+        "limit": "限购3",
+        "category": "血脉修改道具",
+        "desc": "修改血脉的秘药，使精灵获得“奇异血脉”。",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/a/ab/eg7zj03u487p1l3f91z499w1nxdzac1.png/100px-Xuemai_qiyixuemai.png",
+        "is_on_sale": true,
+        "has_ended": false,
+        "is_upcoming": false,
+        "remain": "03:57:07",
+        "slot_label": "08:00-12:00",
+        "start_at": 1792454400,
+        "end_at": 1792468800
+      },
+      {
+        "name": "祝福项坠",
+        "price": "80w",
+        "limit": "限购1",
+        "category": "珍稀货币",
+        "desc": "进行精灵赐福的必要道具。能容纳祝福的神秘容器。",
+        "image_url": "//img.71acg.net/whd~hykb/comm/hd_admin_upload_2982_56aa7234a2be18aae2069541da77b555.png",
+        "is_on_sale": true,
+        "has_ended": false,
+        "is_upcoming": false,
+        "remain": "03:57:07",
+        "slot_label": "08:00-12:00",
+        "start_at": 1792454400,
+        "end_at": 1792468800
+      },
+      {
+        "name": "神奇的蛋",
+        "price": "36000",
+        "limit": "限购5",
+        "category": "精灵蛋",
+        "desc": "蕴含着难以捉摸的魔力，不知道可以孵化出哪种精灵。",
+        "image_url": "//img.71acg.net/whd~hykb/comm/hd_admin_upload_2982_5390e1a946446e64d929ad89a3ad3eed.png",
+        "is_on_sale": true,
+        "has_ended": false,
+        "is_upcoming": false,
+        "remain": "03:57:07",
+        "slot_label": "08:00-12:00",
+        "start_at": 1792454400,
+        "end_at": 1792468800
+      }
+    ],
     "time_slots": [
       {
         "label": "08:00-12:00"
@@ -18,6 +64,6 @@
         "label": "20:00-24:00"
       }
     ],
-    "updated_at": "2026-10-20 00:25:20"
+    "updated_at": "2026-10-20 08:02:52"
   }
 }
