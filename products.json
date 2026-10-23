@@ -18,19 +18,19 @@
     ],
     "products": [
       {
-        "name": "幽系血脉秘药",
-        "price": "16w",
-        "limit": "限购3",
-        "category": "血脉修改道具",
-        "desc": "能唤醒血脉力量的远古秘药，使精灵获得幽系血脉。 “一段失落的秘密将被重拾。”",
-        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/3/31/79r65pjlgs4boduwx17vu94sqn0i2t6.png/100px-Xuemai_youling.png",
+        "name": "火系粉尘",
+        "price": "500",
+        "limit": "限购100",
+        "category": "炼金材料",
+        "desc": "常见的炼金材料，蕴含少量火系魔法，是合成技能石的主要触媒。",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/a/a6/a5v60zfm9ivyri166tias4efjnp5vyt.png/100px-100122.png",
         "is_on_sale": true,
         "has_ended": false,
         "is_upcoming": false,
-        "remain": "00:06:42",
-        "slot_label": "12:00-16:00",
-        "start_at": 1792728000,
-        "end_at": 1792742400
+        "remain": "03:56:34",
+        "slot_label": "16:00-20:00",
+        "start_at": 1792742400,
+        "end_at": 1792756800
       },
       {
         "name": "暗星球",
@@ -76,10 +76,25 @@
         "slot_label": "08:00-12:00",
         "start_at": 1792713600,
         "end_at": 1792728000
+      },
+      {
+        "name": "幽系血脉秘药",
+        "price": "16w",
+        "limit": "限购3",
+        "category": "血脉修改道具",
+        "desc": "能唤醒血脉力量的远古秘药，使精灵获得幽系血脉。 “一段失落的秘密将被重拾。”",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/3/31/79r65pjlgs4boduwx17vu94sqn0i2t6.png/100px-Xuemai_youling.png",
+        "is_on_sale": false,
+        "has_ended": true,
+        "is_upcoming": false,
+        "remain": "",
+        "slot_label": "12:00-16:00",
+        "start_at": 1792728000,
+        "end_at": 1792742400
       }
     ],
     "on_sale_count": 1,
-    "total_count": 4,
-    "updated_at": "2026-10-23 15:53:17"
+    "total_count": 5,
+    "updated_at": "2026-10-23 16:03:25"
   }
 }
