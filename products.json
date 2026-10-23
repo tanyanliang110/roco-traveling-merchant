@@ -18,19 +18,19 @@
     ],
     "products": [
       {
-        "name": "火系粉尘",
+        "name": "幻系粉尘",
         "price": "500",
         "limit": "限购100",
         "category": "炼金材料",
-        "desc": "常见的炼金材料，蕴含少量火系魔法，是合成技能石的主要触媒。",
-        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/a/a6/a5v60zfm9ivyri166tias4efjnp5vyt.png/100px-100122.png",
+        "desc": "常见的炼金材料，蕴含少量幻系魔法，是合成技能石的主要触媒。",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/2/24/sgt0lc5llwfvlcmjhr1awhwq6st35fj.png/100px-100139.png",
         "is_on_sale": true,
         "has_ended": false,
         "is_upcoming": false,
-        "remain": "00:06:30",
-        "slot_label": "16:00-20:00",
-        "start_at": 1792742400,
-        "end_at": 1792756800
+        "remain": "03:56:44",
+        "slot_label": "20:00-24:00",
+        "start_at": 1792756800,
+        "end_at": 1792771200
       },
       {
         "name": "暗星球",
@@ -39,10 +39,25 @@
         "category": "特制咕噜球",
         "desc": "更适合用来捕捉幽系、恶系精灵。 爱捉弄的球，喜欢偷袭精灵。",
         "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/5/5a/hif6470l7ojdexwm72t9brp0f0x3h4x.png/100px-Img_daodanqiu.png",
-        "is_on_sale": false,
+        "is_on_sale": true,
         "has_ended": false,
-        "is_upcoming": true,
-        "remain": "",
+        "is_upcoming": false,
+        "remain": "03:56:44",
+        "slot_label": "20:00-24:00",
+        "start_at": 1792756800,
+        "end_at": 1792771200
+      },
+      {
+        "name": "紫莲刚玉",
+        "price": "1000",
+        "limit": "限购100",
+        "category": "炼金材料",
+        "desc": "比较常用的炼金材料，可以用来合成咕噜球和技能石。 紫雀花王朝的贵族相信这是复活与不朽的象征，常常将紫莲刚玉制作成护身符随身携带。",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/9/9c/s7ej54xr4magmv0h0zag15jah6avwlc.png/100px-100682.png",
+        "is_on_sale": true,
+        "has_ended": false,
+        "is_upcoming": false,
+        "remain": "03:56:44",
         "slot_label": "20:00-24:00",
         "start_at": 1792756800,
         "end_at": 1792771200
@@ -54,10 +69,25 @@
         "category": "特制咕噜球",
         "desc": "更适合用来捕捉水系、翼系精灵。 轻快的球，能直线飞跃很远的距离。",
         "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/4/4b/60uvwzet0brdqlhtoa89domccpbo4hr.png/100px-Img_wangdiuqiu.png",
-        "is_on_sale": false,
+        "is_on_sale": true,
         "has_ended": false,
-        "is_upcoming": true,
-        "remain": "",
+        "is_upcoming": false,
+        "remain": "03:56:44",
+        "slot_label": "20:00-24:00",
+        "start_at": 1792756800,
+        "end_at": 1792771200
+      },
+      {
+        "name": "黑晶琉璃",
+        "price": "1000",
+        "limit": "限购100",
+        "category": "炼金材料",
+        "desc": "比较常用的炼金材料，可以用来合成咕噜球和技能石。 “我的阿米亚特说这玩意儿太香了，嚼起来有些呛口，像火山灰，有纯正的拉布朗矿山味道。”",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/b/bc/khe20j8lwkt1bg9g4b0gbnsff48g93c.png/100px-100628.png",
+        "is_on_sale": true,
+        "has_ended": false,
+        "is_upcoming": false,
+        "remain": "03:56:44",
         "slot_label": "20:00-24:00",
         "start_at": 1792756800,
         "end_at": 1792771200
@@ -91,10 +121,25 @@
         "slot_label": "12:00-16:00",
         "start_at": 1792728000,
         "end_at": 1792742400
+      },
+      {
+        "name": "火系粉尘",
+        "price": "500",
+        "limit": "限购100",
+        "category": "炼金材料",
+        "desc": "常见的炼金材料，蕴含少量火系魔法，是合成技能石的主要触媒。",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/a/a6/a5v60zfm9ivyri166tias4efjnp5vyt.png/100px-100122.png",
+        "is_on_sale": false,
+        "has_ended": true,
+        "is_upcoming": false,
+        "remain": "",
+        "slot_label": "16:00-20:00",
+        "start_at": 1792742400,
+        "end_at": 1792756800
       }
     ],
-    "on_sale_count": 1,
-    "total_count": 5,
-    "updated_at": "2026-10-23 19:53:29"
+    "on_sale_count": 5,
+    "total_count": 8,
+    "updated_at": "2026-10-23 20:03:15"
   }
 }
