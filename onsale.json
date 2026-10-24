@@ -2,8 +2,39 @@
   "code": 200,
   "message": "success",
   "data": {
-    "on_sale_count": 0,
-    "products": [],
+    "on_sale_count": 2,
+    "products": [
+      {
+        "name": "冰系血脉秘药",
+        "price": "16w",
+        "limit": "限购3",
+        "category": "血脉修改道具",
+        "desc": "能唤醒血脉力量的远古秘药，使精灵获得冰系血脉。 “一段失落的秘密将被重拾。”",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/3/3f/8uweaysx83rtha1qyqpjvd9tsgkdv90.png/100px-Xuemai_bing.png",
+        "is_on_sale": true,
+        "has_ended": false,
+        "is_upcoming": false,
+        "remain": "03:56:46",
+        "slot_label": "08:00-12:00",
+        "start_at": 1792800000,
+        "end_at": 1792814400
+      },
+      {
+        "name": "神奇的蛋",
+        "price": "36000",
+        "limit": "限购5",
+        "category": "精灵蛋",
+        "desc": "蕴含着难以捉摸的魔力，不知道可以孵化出哪种精灵。",
+        "image_url": "//img.71acg.net/whd~hykb/comm/hd_admin_upload_2982_5390e1a946446e64d929ad89a3ad3eed.png",
+        "is_on_sale": true,
+        "has_ended": false,
+        "is_upcoming": false,
+        "remain": "03:56:46",
+        "slot_label": "08:00-12:00",
+        "start_at": 1792800000,
+        "end_at": 1792814400
+      }
+    ],
     "time_slots": [
       {
         "label": "08:00-12:00"
@@ -18,6 +49,6 @@
         "label": "20:00-24:00"
       }
     ],
-    "updated_at": "2026-10-24 01:58:14"
+    "updated_at": "2026-10-24 08:03:13"
   }
 }
