@@ -18,34 +18,49 @@
     ],
     "products": [
       {
-        "name": "普通粉尘",
-        "price": "500",
-        "limit": "限购100",
-        "category": "炼金材料",
-        "desc": "常见的炼金材料，蕴含少量普通系魔法，是合成技能石的主要触媒。",
-        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/f/f6/ls7hsygs9epizddf1xo4q9b2iu1dduu.png/100px-100127.png",
+        "name": "国王球",
+        "price": "16w",
+        "limit": "限购3",
+        "category": "咕噜球",
+        "desc": "昂贵且好用的咕噜球，能十分轻易地捕捉精灵，并能提升精灵的天分。 曾经专供贵族使用，制作方法不明。",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/2/2e/jygbfxpdbup5weqy4zaqnyaw2fcfyrq.png/100px-100255.png",
         "is_on_sale": true,
         "has_ended": false,
         "is_upcoming": false,
-        "remain": "00:06:52",
-        "slot_label": "08:00-12:00",
-        "start_at": 1792886400,
-        "end_at": 1792900800
+        "remain": "03:56:42",
+        "slot_label": "12:00-16:00",
+        "start_at": 1792900800,
+        "end_at": 1792915200
       },
       {
-        "name": "蓝晶碧玺",
+        "name": "水系血脉秘药",
+        "price": "16w",
+        "limit": "限购3",
+        "category": "血脉修改道具",
+        "desc": "能唤醒血脉力量的远古秘药，使精灵获得水系血脉。 “一段失落的秘密将被重拾。”",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/4/45/i1hr5krh0b2oqgi3iv1m2k7geyox4n1.png/100px-Xuemai_shui.png",
+        "is_on_sale": true,
+        "has_ended": false,
+        "is_upcoming": false,
+        "remain": "03:56:42",
+        "slot_label": "12:00-16:00",
+        "start_at": 1792900800,
+        "end_at": 1792915200
+      },
+      {
+        "name": "紫莲刚玉",
         "price": "1000",
         "limit": "限购100",
         "category": "炼金材料",
-        "desc": "比较常用的炼金材料，可以用来合成咕噜球和技能石。 某些晶石蜗会产出珍贵的粉蓝色碧玺，为此商人翻着花样研究晶石蜗的食谱喜好。",
-        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/c/c5/k8wzdzechd88qs9bxuvcnyg0pv4tzl4.png/100px-100681.png",
+        "desc": "比较常用的炼金材料，可以用来合成咕噜球和技能石。 紫雀花王朝的贵族相信这是复活与不朽的象征，常常将紫莲刚玉制作成护身符随身携带。",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/9/9c/s7ej54xr4magmv0h0zag15jah6avwlc.png/100px-100682.png",
         "is_on_sale": true,
         "has_ended": false,
         "is_upcoming": false,
-        "remain": "00:06:52",
-        "slot_label": "08:00-12:00",
-        "start_at": 1792886400,
-        "end_at": 1792900800
+        "remain": "03:56:42",
+        "slot_label": "12:00-16:00",
+        "start_at": 1792900800,
+        "end_at": 1792915200
       },
       {
         "name": "暗星球",
@@ -76,10 +91,40 @@
         "slot_label": "20:00-24:00",
         "start_at": 1792929600,
         "end_at": 1792944000
+      },
+      {
+        "name": "普通粉尘",
+        "price": "500",
+        "limit": "限购100",
+        "category": "炼金材料",
+        "desc": "常见的炼金材料，蕴含少量普通系魔法，是合成技能石的主要触媒。",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/f/f6/ls7hsygs9epizddf1xo4q9b2iu1dduu.png/100px-100127.png",
+        "is_on_sale": false,
+        "has_ended": true,
+        "is_upcoming": false,
+        "remain": "",
+        "slot_label": "08:00-12:00",
+        "start_at": 1792886400,
+        "end_at": 1792900800
+      },
+      {
+        "name": "蓝晶碧玺",
+        "price": "1000",
+        "limit": "限购100",
+        "category": "炼金材料",
+        "desc": "比较常用的炼金材料，可以用来合成咕噜球和技能石。 某些晶石蜗会产出珍贵的粉蓝色碧玺，为此商人翻着花样研究晶石蜗的食谱喜好。",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/c/c5/k8wzdzechd88qs9bxuvcnyg0pv4tzl4.png/100px-100681.png",
+        "is_on_sale": false,
+        "has_ended": true,
+        "is_upcoming": false,
+        "remain": "",
+        "slot_label": "08:00-12:00",
+        "start_at": 1792886400,
+        "end_at": 1792900800
       }
     ],
-    "on_sale_count": 2,
-    "total_count": 4,
-    "updated_at": "2026-10-25 11:53:07"
+    "on_sale_count": 3,
+    "total_count": 7,
+    "updated_at": "2026-10-25 12:03:17"
   }
 }
