@@ -27,7 +27,7 @@
         "is_on_sale": true,
         "has_ended": false,
         "is_upcoming": false,
-        "remain": "02:57:21",
+        "remain": "02:47:19",
         "slot_label": "16:00-20:00",
         "start_at": 1793347200,
         "end_at": 1793361600
@@ -42,10 +42,25 @@
         "is_on_sale": true,
         "has_ended": false,
         "is_upcoming": false,
-        "remain": "02:57:21",
+        "remain": "02:47:19",
         "slot_label": "16:00-20:00",
         "start_at": 1793347200,
         "end_at": 1793361600
+      },
+      {
+        "name": "捣蛋糖果*30",
+        "price": "5",
+        "limit": "限购1",
+        "category": "活动货币",
+        "desc": "裹着诡趣糖衣的魔力糖果，甜意之下藏着恶作剧的魔法。收下糖果，开启这场这场王国里的捣蛋狂欢吧~",
+        "image_url": "//img.71acg.net/whd~hykb/comm/hd_admin_upload_2982_580c087952586ebaa33b4dbc33235196.png",
+        "is_on_sale": false,
+        "has_ended": false,
+        "is_upcoming": true,
+        "remain": "",
+        "slot_label": "20:00-24:00",
+        "start_at": 1793880000,
+        "end_at": 1793894400
       },
       {
         "name": "网兜球",
@@ -94,7 +109,7 @@
       }
     ],
     "on_sale_count": 2,
-    "total_count": 5,
-    "updated_at": "2026-10-30 17:02:38"
+    "total_count": 6,
+    "updated_at": "2026-10-30 17:12:40"
   }
 }
