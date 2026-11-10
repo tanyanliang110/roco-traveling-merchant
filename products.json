@@ -18,21 +18,6 @@
     ],
     "products": [
       {
-        "name": "幽系粉尘",
-        "price": "500",
-        "limit": "限购100",
-        "category": "炼金材料",
-        "desc": "常见的炼金材料，蕴含少量幽系魔法，是合成技能石的主要触媒。",
-        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/2/20/okbnyp4feg52iaxuijvjzv6wodaqjmi.png/100px-100126.png",
-        "is_on_sale": true,
-        "has_ended": false,
-        "is_upcoming": false,
-        "remain": "00:06:56",
-        "slot_label": "20:00-24:00",
-        "start_at": 1794312000,
-        "end_at": 1794326400
-      },
-      {
         "name": "神奇的蛋",
         "price": "36000",
         "limit": "限购5",
@@ -121,10 +106,25 @@
         "slot_label": "16:00-20:00",
         "start_at": 1794297600,
         "end_at": 1794312000
+      },
+      {
+        "name": "幽系粉尘",
+        "price": "500",
+        "limit": "限购100",
+        "category": "炼金材料",
+        "desc": "常见的炼金材料，蕴含少量幽系魔法，是合成技能石的主要触媒。",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/2/20/okbnyp4feg52iaxuijvjzv6wodaqjmi.png/100px-100126.png",
+        "is_on_sale": false,
+        "has_ended": true,
+        "is_upcoming": false,
+        "remain": "",
+        "slot_label": "20:00-24:00",
+        "start_at": 1794312000,
+        "end_at": 1794326400
       }
     ],
-    "on_sale_count": 1,
+    "on_sale_count": 0,
     "total_count": 7,
-    "updated_at": "2026-11-10 23:53:03"
+    "updated_at": "2026-11-11 04:58:10"
   }
 }
