@@ -27,10 +27,10 @@
         "is_on_sale": true,
         "has_ended": false,
         "is_upcoming": false,
-        "remain": "00:07:11",
-        "slot_label": "12:00-16:00",
-        "start_at": 1794369600,
-        "end_at": 1794384000
+        "remain": "03:57:12",
+        "slot_label": "16:00-20:00",
+        "start_at": 1794384000,
+        "end_at": 1794398400
       },
       {
         "name": "虫系粉尘",
@@ -46,10 +46,25 @@
         "slot_label": "08:00-12:00",
         "start_at": 1794355200,
         "end_at": 1794369600
+      },
+      {
+        "name": "魔力果",
+        "price": "6000",
+        "limit": "限购20",
+        "category": "精灵喂养材料",
+        "desc": "不太常见的果实，精灵食用后获得能力提升。 “精灵食物营养科的研究总是不见进展，这么多年了精灵还在吃果子。”",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/c/c6/5qe6rcdtfxe1gsrvgj3lrn033athx9p.png/100px-100668.png",
+        "is_on_sale": false,
+        "has_ended": true,
+        "is_upcoming": false,
+        "remain": "",
+        "slot_label": "12:00-16:00",
+        "start_at": 1794369600,
+        "end_at": 1794384000
       }
     ],
     "on_sale_count": 1,
-    "total_count": 2,
-    "updated_at": "2026-11-11 15:52:48"
+    "total_count": 3,
+    "updated_at": "2026-11-11 16:02:47"
   }
 }
