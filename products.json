@@ -18,23 +18,38 @@
     ],
     "products": [
       {
+        "name": "魔力果",
+        "price": "6000",
+        "limit": "限购20",
+        "category": "精灵喂养材料",
+        "desc": "不太常见的果实，精灵食用后获得能力提升。 “精灵食物营养科的研究总是不见进展，这么多年了精灵还在吃果子。”",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/c/c6/5qe6rcdtfxe1gsrvgj3lrn033athx9p.png/100px-100668.png",
+        "is_on_sale": true,
+        "has_ended": false,
+        "is_upcoming": false,
+        "remain": "03:57:11",
+        "slot_label": "12:00-16:00",
+        "start_at": 1794369600,
+        "end_at": 1794384000
+      },
+      {
         "name": "虫系粉尘",
         "price": "500",
         "limit": "限购100",
         "category": "炼金材料",
         "desc": "常见的炼金材料，蕴含少量虫系魔法，是合成技能石的主要触媒。",
         "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/c/c0/ihsb7b9pcs210dtaiswlsaxuhe2jfaa.png/100px-100134.png",
-        "is_on_sale": true,
-        "has_ended": false,
+        "is_on_sale": false,
+        "has_ended": true,
         "is_upcoming": false,
-        "remain": "00:07:12",
+        "remain": "",
         "slot_label": "08:00-12:00",
         "start_at": 1794355200,
         "end_at": 1794369600
       }
     ],
     "on_sale_count": 1,
-    "total_count": 1,
-    "updated_at": "2026-11-11 11:52:47"
+    "total_count": 2,
+    "updated_at": "2026-11-11 12:02:48"
   }
 }
