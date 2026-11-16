@@ -2,8 +2,23 @@
   "code": 200,
   "message": "success",
   "data": {
-    "on_sale_count": 1,
+    "on_sale_count": 2,
     "products": [
+      {
+        "name": "机械粉尘",
+        "price": "500",
+        "limit": "限购100",
+        "category": "炼金材料",
+        "desc": "常见的炼金材料，蕴含少量机械系魔法，是合成技能石的主要触媒。",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/1/1c/lcsenwszmlkz002ai6du9f32tbfpi19.png/100px-100138.png",
+        "is_on_sale": true,
+        "has_ended": false,
+        "is_upcoming": false,
+        "remain": "03:57:26",
+        "slot_label": "12:00-16:00",
+        "start_at": 1794801600,
+        "end_at": 1794816000
+      },
       {
         "name": "黄石榴石",
         "price": "1000",
@@ -14,10 +29,10 @@
         "is_on_sale": true,
         "has_ended": false,
         "is_upcoming": false,
-        "remain": "00:07:29",
-        "slot_label": "08:00-12:00",
-        "start_at": 1794787200,
-        "end_at": 1794801600
+        "remain": "03:57:26",
+        "slot_label": "12:00-16:00",
+        "start_at": 1794801600,
+        "end_at": 1794816000
       }
     ],
     "time_slots": [
@@ -34,6 +49,6 @@
         "label": "20:00-24:00"
       }
     ],
-    "updated_at": "2026-11-16 11:52:30"
+    "updated_at": "2026-11-16 12:02:33"
   }
 }
