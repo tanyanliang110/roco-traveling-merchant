@@ -2,38 +2,8 @@
   "code": 200,
   "message": "success",
   "data": {
-    "on_sale_count": 3,
+    "on_sale_count": 1,
     "products": [
-      {
-        "name": "电系粉尘",
-        "price": "500",
-        "limit": "限购100",
-        "category": "炼金材料",
-        "desc": "常见的炼金材料，蕴含少量电系魔法，是合成技能石的主要触媒。",
-        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/2/2f/2sux0g15uo8at77bwpoxrg32rv3l4dz.png/100px-100132.png",
-        "is_on_sale": true,
-        "has_ended": false,
-        "is_upcoming": false,
-        "remain": "00:07:42",
-        "slot_label": "12:00-16:00",
-        "start_at": 1795060800,
-        "end_at": 1795075200
-      },
-      {
-        "name": "神奇的蛋",
-        "price": "36000",
-        "limit": "限购5",
-        "category": "精灵蛋",
-        "desc": "蕴含着难以捉摸的魔力，不知道可以孵化出哪种精灵。",
-        "image_url": "//img.71acg.net/whd~hykb/comm/hd_admin_upload_2982_5390e1a946446e64d929ad89a3ad3eed.png",
-        "is_on_sale": true,
-        "has_ended": false,
-        "is_upcoming": false,
-        "remain": "00:07:42",
-        "slot_label": "12:00-16:00",
-        "start_at": 1795060800,
-        "end_at": 1795075200
-      },
       {
         "name": "黄石榴石",
         "price": "1000",
@@ -44,10 +14,10 @@
         "is_on_sale": true,
         "has_ended": false,
         "is_upcoming": false,
-        "remain": "00:07:42",
-        "slot_label": "12:00-16:00",
-        "start_at": 1795060800,
-        "end_at": 1795075200
+        "remain": "03:57:44",
+        "slot_label": "16:00-20:00",
+        "start_at": 1795075200,
+        "end_at": 1795089600
       }
     ],
     "time_slots": [
@@ -64,6 +34,6 @@
         "label": "20:00-24:00"
       }
     ],
-    "updated_at": "2026-11-19 15:52:17"
+    "updated_at": "2026-11-19 16:02:15"
   }
 }
