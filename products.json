@@ -27,7 +27,7 @@
         "is_on_sale": true,
         "has_ended": false,
         "is_upcoming": false,
-        "remain": "02:17:39",
+        "remain": "02:07:44",
         "slot_label": "08:00-12:00",
         "start_at": 1795132800,
         "end_at": 1795147200
@@ -42,7 +42,7 @@
         "is_on_sale": true,
         "has_ended": false,
         "is_upcoming": false,
-        "remain": "02:17:39",
+        "remain": "02:07:44",
         "slot_label": "08:00-12:00",
         "start_at": 1795132800,
         "end_at": 1795147200
@@ -57,7 +57,7 @@
         "is_on_sale": true,
         "has_ended": false,
         "is_upcoming": false,
-        "remain": "02:17:39",
+        "remain": "02:07:44",
         "slot_label": "08:00-12:00",
         "start_at": 1795132800,
         "end_at": 1795147200
@@ -65,7 +65,7 @@
       {
         "name": "网兜球",
         "price": "3000",
-        "limit": "限购100",
+        "limit": "限购200",
         "category": "特制咕噜球",
         "desc": "更适合用来捕捉水系、翼系精灵。 轻快的球，能直线飞跃很远的距离。",
         "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/4/4b/60uvwzet0brdqlhtoa89domccpbo4hr.png/100px-Img_wangdiuqiu.png",
@@ -80,6 +80,6 @@
     ],
     "on_sale_count": 3,
     "total_count": 4,
-    "updated_at": "2026-11-20 09:42:20"
+    "updated_at": "2026-11-20 09:52:15"
   }
 }
