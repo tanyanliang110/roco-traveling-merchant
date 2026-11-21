@@ -2,8 +2,24 @@
   "code": 200,
   "message": "success",
   "data": {
-    "on_sale_count": 0,
-    "products": [],
+    "on_sale_count": 1,
+    "products": [
+      {
+        "name": "国王球",
+        "price": "16w",
+        "limit": "限购3",
+        "category": "咕噜球",
+        "desc": "昂贵且好用的咕噜球，能十分轻易地捕捉精灵，并能提升精灵的天分。 曾经专供贵族使用，制作方法不明。",
+        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/2/2e/jygbfxpdbup5weqy4zaqnyaw2fcfyrq.png/100px-100255.png",
+        "is_on_sale": true,
+        "has_ended": false,
+        "is_upcoming": false,
+        "remain": "03:56:29",
+        "slot_label": "08:00-12:00",
+        "start_at": 1795219200,
+        "end_at": 1795233600
+      }
+    ],
     "time_slots": [
       {
         "label": "08:00-12:00"
@@ -18,6 +34,6 @@
         "label": "20:00-24:00"
       }
     ],
-    "updated_at": "2026-11-21 05:54:49"
+    "updated_at": "2026-11-21 08:03:30"
   }
 }
