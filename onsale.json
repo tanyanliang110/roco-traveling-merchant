@@ -2,69 +2,8 @@
   "code": 200,
   "message": "success",
   "data": {
-    "on_sale_count": 4,
-    "products": [
-      {
-        "name": "国王球",
-        "price": "16w",
-        "limit": "限购3",
-        "category": "咕噜球",
-        "desc": "昂贵且好用的咕噜球，能十分轻易地捕捉精灵，并能提升精灵的天分。 曾经专供贵族使用，制作方法不明。",
-        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/2/2e/jygbfxpdbup5weqy4zaqnyaw2fcfyrq.png/100px-100255.png",
-        "is_on_sale": true,
-        "has_ended": false,
-        "is_upcoming": false,
-        "remain": "00:06:59",
-        "slot_label": "20:00-24:00",
-        "start_at": 1795348800,
-        "end_at": 1795363200
-      },
-      {
-        "name": "电系粉尘",
-        "price": "500",
-        "limit": "限购100",
-        "category": "炼金材料",
-        "desc": "常见的炼金材料，蕴含少量电系魔法，是合成技能石的主要触媒。",
-        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/2/2f/2sux0g15uo8at77bwpoxrg32rv3l4dz.png/100px-100132.png",
-        "is_on_sale": true,
-        "has_ended": false,
-        "is_upcoming": false,
-        "remain": "00:06:59",
-        "slot_label": "20:00-24:00",
-        "start_at": 1795348800,
-        "end_at": 1795363200
-      },
-      {
-        "name": "紫莲刚玉",
-        "price": "1000",
-        "limit": "限购100",
-        "category": "炼金材料",
-        "desc": "比较常用的炼金材料，可以用来合成咕噜球和技能石。 紫雀花王朝的贵族相信这是复活与不朽的象征，常常将紫莲刚玉制作成护身符随身携带。",
-        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/9/9c/s7ej54xr4magmv0h0zag15jah6avwlc.png/100px-100682.png",
-        "is_on_sale": true,
-        "has_ended": false,
-        "is_upcoming": false,
-        "remain": "00:06:59",
-        "slot_label": "20:00-24:00",
-        "start_at": 1795348800,
-        "end_at": 1795363200
-      },
-      {
-        "name": "网兜球",
-        "price": "3000",
-        "limit": "限购100",
-        "category": "特制咕噜球",
-        "desc": "更适合用来捕捉水系、翼系精灵。 轻快的球，能直线飞跃很远的距离。",
-        "image_url": "https://patchwiki.biligame.com/images/rocom/thumb/4/4b/60uvwzet0brdqlhtoa89domccpbo4hr.png/100px-Img_wangdiuqiu.png",
-        "is_on_sale": true,
-        "has_ended": false,
-        "is_upcoming": false,
-        "remain": "00:06:59",
-        "slot_label": "20:00-24:00",
-        "start_at": 1795348800,
-        "end_at": 1795363200
-      }
-    ],
+    "on_sale_count": 0,
+    "products": [],
     "time_slots": [
       {
         "label": "08:00-12:00"
@@ -79,6 +18,6 @@
         "label": "20:00-24:00"
       }
     ],
-    "updated_at": "2026-11-22 23:53:00"
+    "updated_at": "2026-11-23 04:23:30"
   }
 }
